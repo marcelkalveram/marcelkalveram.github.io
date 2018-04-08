@@ -1,0 +1,186 @@
+---
+layout: post
+status: publish
+published: true
+title: From The Front 2012 / Bologna - Day 2
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+wordpress_id: 25
+wordpress_url: http://marcelkalveram.com/?p=25
+date: '2012-09-28 22:56:00 +0200'
+date_gmt: '2012-09-28 22:56:00 +0200'
+<!-- categories:
+- Conferences
+- Web Development -->
+tags:
+- conference
+- ftf12
+- frontend
+comments: []
+---
+<p>This is part two of my review of the From The Front conference that took place in Bologna on September 20th and 21st.</p>
+<p><!--more--></p>
+<p>The conference itself - as opposed to the workshop - &nbsp;was held at an old theatre named &#8220;Teatro Duse" which is an impressive venue with high ceilings, balconies and a huge stage.</p>
+<p>With a fully packed venue, we were about to see 10 speakers giving talks about topics ranging from technology and mobile over philosophy and poetry up to debugging and usability.</p>
+<p>Here&#8217;s a short summary of every single one of them.</p>
+<h2>YOU&#8217;RE NOT DOING USABILITY TESTING? ARE YOU&hellip; NUTS? by Steve Krug</h2>
+<p class="p1">The first talk came from usability legend <strong><a href="https://ja.twitter.com/skrug" title="Twitter account of Steve Krug" target="_blank">Steve Krug</a></strong>. 12 years ago he releases the highly acclaimed &#8220;Don&#8217;t make me think", and a few years ago his second publication was released under the name &#8220;Rocket Surgery Made Easy".&nbsp;</p>
+<p class="p2">In this session, he revealed some of the secrets about painlessly integrating usability testing into your enterprise. I would like to sum up those points that I noted down for being the most crucial:</p>
+<ul>
+<li>Do usability testing one morning a month. It will keep your developers busy for the rest of it.</li>
+<li>Invite 5 random people, let them try to accomplish pre-defined tasks, observe them from a separate room. Invite as many people as possible. Testers have to speak out loudly while they are testing.</li>
+<li>Make it a spectator sport</li>
+<li>On most company&#8217;s websites, the most serious problems don&#8217;t get fixed</li>
+<li>Tweak, don&#8217;t redesign (<a href="http://my.safaribooksonline.com/book/web-development/usability/9780321702821/the-least-you-can-do-why-doing-less-is-often-the-best-way-to-fix-things/ch11lev1sec1" title="Link to why to tweak and not re-design websites" target="_blank">here is why</a>), duct-tape is a good thing</li>
+</ul>
+<h2>A PIXEL IS NOT A PIXEL by Peter Paul Koch</h2>
+<p class="p1">Next up was <strong><a href="https://ja.twitter.com/ppk" title="Link to Peter Paul Koch's Twitter account" target="_blank">Peter Paul Koch</a></strong>, known to most of us for his scientific research on CSS, mobile phones and Javascript. (<a href="http://www.quirksmode.org/" title="Link to quirksmode.org" target="_blank">quirksmode.org</a>)</p>
+<p class="p1">The topic of his talk was &#8220;A pixel is not a pixel". He introduced the important difference between the two viewports of a mobile browser, namely:</p>
+<ul>
+<li>the layout viewport and</li>
+<li>the visual viewport</li>
+</ul>
+<p class="p2">The former represents the actual browser canvas, which means what you can control via CSS while the latter is what the user sees, the physical representation so to speak.&nbsp;</p>
+<p class="p1">This becomes increasingly complicated when it comes to zooming, fixed positioning and media queries, because mobile browsers tend to behave differently when implementing these parameters and functionalities.</p>
+<p class="p2">As an example, PPK fired up 4 different mobile browsers on an Android device and how they interpreted the &#8220;position: fixed parameter", the results revealed a lot of inconsistencies. <a href="http://www.quirksmode.org/mobile/viewports2.html" title="Article on the two different viewports at quirksmode.org" target="_blank">More about this problem can be read here.</a></p>
+<h2>SCIENCE OF DESIGN by Denis Mishonov</h2>
+<p class="p1">The following talk was from <strong><a href="https://ja.twitter.com/mishunov" title="Link to Denis Mishunov's Twitter account" target="_blank">Denis Mishonov</a></strong>, called &#8220;The Science Of Design", where he &nbsp;gave a brief introduction about the principles of design theory. These included:</p>
+<ul>
+<li>The law of proximity</li>
+<li>The law of alignment</li>
+<li>The law of repetition</li>
+<li>The law of contrast</li>
+<li>The rule of thirds</li>
+<li>The golden cut</li>
+</ul>
+<p class="p2">The presentation was very beautifuly designed and a pleasure to watch. Most of the content was however not very new to me, as it had already been covered in several of my university courses about design and human-computer interaction.</p>
+<h2>MOBILE DEBUGGING&nbsp;by Remy Sharp</h2>
+<p class="p1">Right after that came <strong><a href="https://ja.twitter.com/rem" title="Link to Remy Sharp's Twitter account" target="_blank">Remy Sharp</a></strong>, who I had actually seen the day before, so most of the information presented to me was not entirely new.</p>
+<p class="p1">The talk which was called &#8220;Debugging Mobile Applications" was built around the following 3 principles which I&#8217;ll explain briefly:</p>
+<ol>
+<li>Know thy enemy:&nbsp;<br />Simulators are not a substitute for&nbsp;real devices, although tools like <a href="http://www.charlesproxy.com/" title="Link to Charles, a web debugging proxy" target="_blank">Charles</a>&nbsp;or <a href="http://www.fiddler2.com/fiddler2/" title="Link to the debugging tool Fiddler" target="_blank">Fiddler</a> are doing a great job</li>
+<li>Close the gap:&nbsp;<br />Host locally, use remote refreshing and real debuggers (e.g. <a href="http://html.adobe.com/edge/inspect/" title="Link to Adobe's Edge Inspect" target="_blank">Adobe Edge Inspect</a>, <a href="http://jsbin.com/" title="Link to JSbin" target="_blank">jsbin</a>, <a href="https://github.com/lexandera/Aardwolf" title="aardwolf" target="_blank">aardwolf</a>,&nbsp;<a href="http://www.opera.com/dragonfly/" title="Link to Opera Dragonfly" target="_blank">Opera Dragonfly</a>)</li>
+<li>Expect the unexpected:&nbsp;<br />Results can differ when being on a Wifi or an ISP network, use last resort debugging (50/50) if necessary to eliminate errors, emulate slow connections (<a href="http://slowyapp.com/" title="Link to Slowy App" target="_blank">slowy app</a>, <a href="http://www.dallaway.com/sloppy/" title="Link to the sloppy app" target="_blank">sloppy</a>). If all fails, take a break</li>
+</ol>
+<h2>INVENTING THE NEW WORLD&nbsp;by Blaine Cook</h2>
+<p>The next speaker was <strong><a href="https://twitter.com/blaine" title="Link to Blaine Cook's Twitter profile" target="_blank">Blaine Cook</a></strong>, the former technical lead at Twitter and inventor of the OAuth protocol.</p>
+<p>He gave a very picturesque, story-telling and inspiring talk about the world, the internet, the future, the present, poems, dreams, langauges, desires and actually everything you wouldn&#8217;t expect on a front-end conference.</p>
+<p>It was a great alternative to the technical information overload we got from the talks before, and gave us 50 minutes of relaxing our minds and thinking about something else.</p>
+<h2>MAKING THINGS BETTER&nbsp;by Linda Sandvik</h2>
+<p>The upcoming talk was from newcomer speaker <strong><a href="https://twitter.com/hyper_linda" title="Link to Linda Sandvik's Twitter profile" target="_blank">Linda Sandvik</a></strong> from London, who admitted that it was her first presentation at a conference.</p>
+<p>Her talk was about self-improvement, and how to leave our comfort-zones, and she grabbed the attention of the crowd pretty quickly with her cute appearance and sophisticated statements.&nbsp;</p>
+<p>Here are some of the valuable advices she gave:</p>
+<ul>
+<li>Do something differently every day</li>
+<li>Fail. Fail Fast. Fail again.</li>
+<li>Every monday, try to do the things you are uncapable of</li>
+<li>You must develop a complete disregard for where your abilities end<br />(This one&#8217;s actually taken from the book&nbsp;<em>It&rsquo;s Not How Good You Are, It&#8217;s How Good You Want to Be, </em>by Paul Arden<em>)</em></li>
+</ul>
+<div>Linda is also the founder of a London-based initiative called <a href="http://codeclub.org.uk/" title="Link to Code Club" target="_blank">Code Club</a>, which organizes nationwide school coding clubs for children between the age of 9 and 11. With already 244 of them in the entire UK, this project seems to have already taken off.</div>
+<h2>APPLICATION CACHE: DOUCHEBAG&nbsp;by Jake Archibald</h2>
+<p>So the next one by <strong><a href="https://twitter.com/jaffathecake" title="Link to Jake Archibald's Twitter accont" target="_blank">Jake Archibald</a></strong> really left a big impression on me, and if I have talked about information overload before, this was going to top it.&nbsp;</p>
+<p>Jake Archibald really knows how to present, although you have to be really concentrated, and after six talks so far, that was probably not the case for the majority of the people, unfortunately.</p>
+<p>In a fast-forward style, Jake explained everything you need to know about the Application Cache, comparing it to the douchebag that is the specimen of a white-collar business person from the financial sector whose only purpose is to sell you stuff.</p>
+<p>Go check out <a href="http://www.alistapart.com/articles/application-cache-is-a-douchebag/" title="Jake Archibald's article about the Application Cache on A List Apart" target="_blank">this article on A List Apart</a> and <a href="https://speakerdeck.com/u/jaffathecake/p/application-cache-douchebag" title="Jake Archibald's talk about the Application Cache on Speakerdeck" target="_blank">the presentation itself</a> if you want to know more, because summarizing this talk what take way to much time and space right here.</p>
+<h2>STATE-BASED DESIGN&nbsp;by Jonathan Snook</h2>
+<p>After a short break we went on with a presentation about CSS. While CSS itself is probably not rocket science, it does certainly have its complexities, especially when it comes to structuring big applications.</p>
+<p>Figuring out some basic rules that help us understand our own code in the long run and make it more accessible to others is what his talk by <strong><a href="https://twitter.com/snookca" title="Link to Jonathan Snook's Twitter account" target="_blank">Jonathan Snook</a></strong> was about.</p>
+<p>So here are a few advices I&#8217;ve written down that I found useful:</p>
+<ul>
+<li>Code for a system, don&#8217;t code CSS for a page</li>
+<li>Think modularly</li>
+<li>Do one thing and only one thing</li>
+<li>Be clear regardless of context</li>
+</ul>
+<div>He also gave some general guidelines about how to setup a site&#8217;s CSS structure:</div>
+<div>
+<ul>
+<li>Base</li>
+<li>Layout</li>
+<ul>
+<li>Header</li>
+<li>Sidebar</li>
+<li>Content</li>
+</ul>
+<li>Modules</li>
+<li>Submodules</li>
+<li>Theme</li>
+<li>State</li>
+</ul>
+<div>For the concrete elements, he proposes to use the following CSS states:</div>
+</div>
+<div>
+<ul>
+<li>Class-based</li>
+<li>Attribute-selector state</li>
+<li>Pseudo-class state</li>
+<li>Media query states</li>
+</ul>
+</div>
+<p>To combine all these methodologies under one hood, he mentioned <a href="http://smacss.com/" title="Link to the website of SMACSS" target="_blank">SMACSS</a>&nbsp;(Scalable and Modular Architecture for CSS) to be a proper approach to keep CSS modular and scalable.</p>
+<h2>RESPONSIVE STORYTELLING&nbsp;by Denise Jacobs</h2>
+<p>The penultimate talk by <strong><a href="https://twitter.com/denisejacobs" title="Link to the Twitter account fo Denise Jacobs" target="_blank">Denise Jacobs</a></strong> was actually a story. Wonderfully underlined by pictures and carefully thought through, it was the story of a brain which was exposed to the common stress factors of today&#8217;s hyperconnected world.</p>
+<p>There were a lot of great insights and phrases in this talk that I would like to recapitulate:</p>
+<ul>
+<li>Creativity takes place in the right side of the brain and we need to train it regularly</li>
+<li>When we are in an alpha-state of mind, we feel relaxed. And this is when we have good ideas</li>
+<li>"Genius is the offspring of the in-between"</li>
+<li>80% of chinese and 68% of the US population suffer under communication addiction</li>
+<li>Unfinished tasks lead to distraction, get rid of &#8220;open loops"</li>
+<li>"We&#8217;re all suffering of an influx of over information"</li>
+<li>"Don&#8217;t force creatitivy, Allow it to come to you"</li>
+</ul>
+<div>Now comes one of my favorite quotes:</div>
+<div>
+<ul>
+<li>"Creation amongst a group of people happens in a secure, relaxed and encouraging environment"</li>
+</ul>
+<ul>
+<li>The logical &nbsp;brain is limited, the right side is unlimited</li>
+<li>When you are playful, you are activating the right side of your brain</li>
+<li>You can do (and be) what you want</li>
+<li>Creatitivy is about embracing paradox</li>
+</ul>
+<div>Here&#8217;s another very good one:</div>
+<div>
+<ul>
+<li>Laughing and playing is serious business when it comes to creativity</li>
+</ul>
+<div>For those that want to read more about this particular topic, she recommended the following two articles:</div>
+<div>
+<ul>
+<li><a href="http://www.alistapart.com/articles/reigniting-your-creative-spark/" title="Link to the article on A List Apart" target="_blank"><a href="http://www.alistapart.com/articles/reigniting-your-creative-spark/" target="_blank">http://www.alistapart.com/articles/reigniting-your-creative-spark/</a></a></li>
+<li><a href="http://www.netmagazine.com/features/four-secrets-enhancing-creative-productivity" title="Link to the article on .net magazine" target="_blank"><a href="http://www.netmagazine.com/features/four-secrets-enhancing-creative-productivity" target="_blank">http://www.netmagazine.com/features/four-secrets-enhancing-creative-productivity</a></a></li>
+</ul>
+</div>
+</div>
+<div>She also recommended these two websites for even more creative input:</div>
+<div>
+<ul>
+<li><a href="https://kicktastic.com" title="Link to Kicktastic" target="_blank"><a href="https://kicktastic.com" target="_blank">https://kicktastic.com</a></a></li>
+<li><a href="http://acreativedose.com/" title="Link to ACreativeDose" target="_blank"><a href="http://acreativedose.com/" target="_blank">http://acreativedose.com/</a></a></li>
+</ul>
+</div>
+</div>
+<h2>DESIGNING FOR HUMANS&nbsp;by Aral Balkan</h2>
+<p>The last talk came from the experience designer&nbsp;<strong><a href="https://twitter.com/aral" title="Link to Aral Balkan's Twitter account" target="_blank">Aral Balkan</a></strong>, who gave a brilliant and passionate presentation about everyday usability.</p>
+<p>He talks about things that we think are &#8220;actually" easy to design, but that reveal tremendous usability mistakes.</p>
+<p>He presents many comical moments where he was confronted with a certain &#8220;black box" and got stuck with very basic operations like &#8220;find the toilet flush" (which was completely misplaced) or &#8220;buy a metro ticket" (but the machine&#8217;s tarif system makes it extremely cumbersome).</p>
+<p>This is why he urges the designers among us to think primarily about the user-friendliness of our products, and to hide as much complexity as possible to make the lives of our users easier.</p>
+<p>I would highly like to encourage you to watch <a href="http://vimeo.com/24181217" title="Link to Aral Balkan's performance at FOWD 2011" target="_blank">this talk</a>&nbsp;from the &#8220;Future Of Web Development 2011", which is only slightly different and contains all the major aspects as well. Have fun!</p>
+<p><strong>Here are some impressions from the theater and some speakers on the stage.</strong></p>
+<div class="photos">
+<p><strong><img align="middle" src="http://media.tumblr.com/tumblr_mb3ut8X95g1qbp6ag.jpg" /></strong></p>
+<p><strong><img src="http://media.tumblr.com/tumblr_mb3uud8Sti1qbp6ag.jpg" /></strong></p>
+<p><strong><img src="http://media.tumblr.com/tumblr_mb3uuu2rov1qbp6ag.jpg" /></strong></p>
+<p><strong><img src="http://media.tumblr.com/tumblr_mb3uvh8It81qbp6ag.jpg" /></strong></p>
+<p><strong><img src="http://media.tumblr.com/tumblr_mb3uw4zkur1qbp6ag.jpg" /></strong></p>
+<p><img src="http://media.tumblr.com/tumblr_mb3uwuK92V1qbp6ag.jpg" /></p>
+<p><img src="http://media.tumblr.com/tumblr_mb3ux9h2ob1qbp6ag.jpg" /></p>
+</div>

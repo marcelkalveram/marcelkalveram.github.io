@@ -1,0 +1,60 @@
+---
+layout: post
+status: publish
+published: true
+title: 3 essential debugging tools for mobile applications
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+wordpress_id: 16
+wordpress_url: http://marcelkalveram.com/?p=16
+date: '2012-10-28 11:53:06 +0100'
+date_gmt: '2012-10-28 11:53:06 +0100'
+<!-- categories:
+- Mobile
+- Performance -->
+tags: []
+comments: []
+---
+<p>In this post I wanted to go over some useful programs that have recently become indispensable for my daily workflow.</p>
+<p><!--more--></p>
+<h2>Adobe Edge Inspect</h2>
+<p>Probably the most famous of all candidates comes from Adobe. <a href="http://html.adobe.com/edge/inspect/" title="Link to Adobe Edge Inspect" target="_blank">Edge Inspect</a>, formerly known as Adobe Shadow, allows you to preview web designs on devices.</p>
+<p>Once you&#8217;ve signed up for a Creative Cloud account (which is obligatory) you have to install a browser plugin and set up Edge Inspect on all the devices you want it to run on. It&#8217;s a procedure of 5 minutes.</p>
+<p><!--more--></p>
+<p>When you have everything set up, you only need to start the Edge application on your desktop (the place where you&#8217;re gonna open your websites), open Edge on your mobile device and connect it to the host that shows up on the screen. Of course, both devices should be on the same network.</p>
+<p>Now, every page you call in your browser will be shown synchronously on all devices that you are connected with. What&#8217;s important to know is that every device manages it&#8217;s own &#8220;browser environment", so if you&#8217;re logged into a website on your desktop doesn&#8217;t mean you&#8217;re running the same session on your mobile phone. The same applies for accepting unsigned SSL certificates, HTTP authentication and client-side caching. The latter however can easyily be cleared on all devices simultaneously with a &#8220;Refresh All" button.</p>
+<p>The most amazing part about Edge Inspect in my opinion is the inclusion of <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/" title="Link to weinre" target="_blank">weinre</a>, a remote debugger for websites that provides development tools such as Firebug to make live changes to your HTML/CSS and Javascript on your device from your computer.</p>
+<h2>JS Console</h2>
+<p>The second tool I want to recommend is JS Console by Remy Sharp. This is a remote tool that serves primarily as a javascript debugger. When you go to the webpage, you&#8217;re presented a console like interface that you can write commands into.</p>
+<p>By typing</p>
+<pre>:listen</pre>
+<p>you can create a new connection, and the site returns a javascript snippet that you need to insert into your web page, e.g.:</p>
+<pre>&nbsp;&lt;script src="http://jsconsole.com/remote.js?A3909C18-1E4E-4BE6-B0B3-A17567"&gt;&lt;/script&gt;</pre>
+<p>By doing so, and calling the website on one of your devices, you can start your remote debugging session right from the console.</p>
+<p>For example, if you&#8217;re in the same network and you&#8217;re running a web server (like MAMP) on your desktop computer, you can call it from your mobile devices with your IP address. You just need to keep the debugging HTML file in your localhost directory so it is accessible from outside. In my case, I called the following URL from my iPhone, the IP address being the one of my Macbook:</p>
+<pre><a href="http://192.168.1.4/remote-debugging.html" target="_blank">http://192.168.1.4/remote-debugging.html</a></pre>
+<p>If everything went well, you&#8217;re gonna see the following in your JS Console session</p>
+<pre>Connection established with <a href="http://192.168.1.4/remote-debugging.html" target="_blank">http://192.168.1.4/remote-debugging.html</a></pre>
+<p>You&#8217;ve taken control over your mobile device and you&#8217;re ready to debug. As an example, run the following command in the JS console terminal window and it should return the width of your device:</p>
+<pre>window.innerWidth</pre>
+<p>which in my case returns 980, the horizontal size of the layout viewport. As another example, type in the following and it should pop up an alert window on your phone:</p>
+<pre>alert("Hello World!")</pre>
+<h2><span>Amazing. Now it&#8217;s up to you to figure out some great new ways of debugging your mobile applications remotely.</span></h2>
+<h2>Charles</h2>
+<p>The third tool in the series is an excellent way for tracking network traffic, an aspect of debugging that the former tools do not include.</p>
+<p><a href="http://www.charlesproxy.com/" title="Link to Charles - Web Debugging Proxy Website" target="_blank">Charles</a> is a &#8220;Web Debugging Proxy Application" which acts as an intermediary for requests &nbsp;between a web server and your mobile device. It&nbsp;</p>
+<p>The easiest way for me to set it up was by following the instructions from this article:&nbsp;<a href="http://blog.mediarain.com/2009/08/iphone-http-connection-debugging/" title="Link to an article with instructions to set up Charles Web Debugging Proxy" target="_blank"><a href="http://blog.mediarain.com/2009/08/iphone-http-connection-debugging/" target="_blank">http://blog.mediarain.com/2009/08/iphone-http-connection-debugging/</a></a></p>
+<p>Once it&#8217;s up and running, Charles allows you to track all outgoing network requests from your device and all incoming network responses going back to it, so you have a complete overview of what data is passed through it.</p>
+<p>For every request, you can see a detailed summary of data like HTTP headers, duration, latency, download size etc. One feature that I especially enjoy is that Charles generates charts for a particular request group, e.g. all responses from a specific domain.</p>
+<ul>
+<li>A timeline chart of responses each one with their corresponding request-latency-response sequence allows me to inspect download duration and detect bottlenecks (e.g. slow JS scripts from a CDN)</li>
+<li>A sizes chart gives me an overview of all HTTP requests, sorted by download size so I can easily figure out which images or scripts might be problematic with respect to devices with low bandwidth</li>
+<li>The same can be done for duration and types, so you see what&#8217;s taking most time to download and which MIME types are making up most of the traffic</li>
+</ul>
+<p>As you can see, there&#8217;s no all-in-one tool at this point that encompasses all aspects of mobile debugging, but with these applications you have a great combination of tools that can help you figure out most of the stuff you need and hopefully resolve some headaches.</p>

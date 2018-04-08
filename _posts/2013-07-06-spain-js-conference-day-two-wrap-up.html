@@ -1,0 +1,126 @@
+---
+layout: post
+status: publish
+published: true
+title: spain.js - Conference day two wrap-up
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+wordpress_id: 67
+wordpress_url: http://marcelkalveram.com/?p=67
+date: '2013-07-06 12:33:12 +0200'
+date_gmt: '2013-07-06 12:33:12 +0200'
+<!-- categories:
+- Conferences -->
+tags: []
+comments: []
+---
+<p>I was so craving for a coffee at around 9 o'clock in the morning when I went to the metro station of &Oacute;pera from where I took the train to the conference venue.</p>
+<p>Luckily, the guys of Spain.js had already prepared everything and getting to the University campus, voil&aacute; &ndash; the coffee was ready for serving which got me quickly into the mood for another 8 hours of information loaded javascript talks.</p>
+<p><!--more--></p>
+<p>Looking at the presentations' topics, the second day of Spain.js promised to sustain the momentum of the first day, and yeah we were going to see nine extremely diverse speakers on stage today, giving talks about everything from 3D over sound APIs to internal properties and parsers.</p>
+<p>Read on...</p>
+<h2>"Javascript for makers"</h2>
+<p>If you're into Arduino, Rapsberry Pi and similar gadgets that are currently used by makers all over the world to build crazy stuff, you would probably be able to have an evening long conversation with <strong>Peter Christensen</strong>, who gave us an introduction to the subject of DIY and the role of javascript in this domain.</p>
+<p>He says that he is seeing more parallels between the world of hardware and software, namely because hardware &ndash; just as software has always been &ndash; is nowadays a lot easier to access, distribute and build on.</p>
+<p>Here's an interesting analogy that he drew:</p>
+<blockquote><p>"Software enables intelligent interaction with abstract things while hardware enables intelligent interaction with physical things."</p>
+</blockquote>
+<p>After a short eletronics crash course, he suggested us visiting one of the maker fairs that are taking place all over the world, the closest one being celebrated <a title="Link to the Maker Fair in Bilbao" href="http://makerfairebilbao.com/" target="_blank">in Bilbao next weekend</a>. These are expositions of people who celebreate the art of creative engineering, building things such as self-reproducing robots or node.js driven submarines.</p>
+<p>I found this talk very inspiring and &ndash; as many others &ndash; I would really like to dig deeper into the world of programmable mini computers if I had the time.</p>
+<p>Slides of this talk can <a title="Link to Peter Christensen's presentation on Slideshare" href="http://www.slideshare.net/pchristensen/programming-therealworld" target="_blank">be found on Slideshare</a>.</p>
+<h2>"Categorizing values"</h2>
+<p>Ok, so far the inspiring stuff. Now it was time for an in-depth, code-based Javascript talk. <strong>Axel Rauschmayer</strong>, a real guru in the world of javascript and who is constantly putting up interesting stuff on his personal blog <a title="Link to the blog 2ality by Axel Rauschmayer" href="http://www.2ality.com/">2ality.com</a> introduced some internals that most of us are inconsciously using every day, but we might not really be aware of while building awesome things.&nbsp;Examples?</p>
+<ul>
+<li>Objects are only equal to themselves, which means that <code>{} === {}</code> is false, but <code>obj === obj</code> is true.</li>
+<li>There are two ways of prototypes:&nbsp;Each object has a hidden property <code>[[Prototype]]</code>, and the type's <code>prototype</code> object when using constructors.</li>
+<li>Understanding the difference between <code>instanceof</code> and <code>typeof</code>.</li>
+</ul>
+<p>Fast-forward to the core of his presentation. The suggestion is to use these four methods of categorization in JavaScript:</p>
+<ul>
+<li>Reading the internal property <code>[[Class]]</code></li>
+<li>via the <code>typeof</code> operator</li>
+<li>via the <code>instanceof</code> operator</li>
+<li>via the function <code>Array.isArray()</code></li>
+</ul>
+<p>In order to get a better understanding of the topic &ndash; as it is very complex &ndash; I suggest you to prepare a big cup of coffee and read the <a title="Link to " href="http://www.adobe.com/devnet/html5/articles/categorizing-values-in-javascript.html" target="_blank">following blog post on Adobe Developer Connection</a>.</p>
+<h2>"A particles system with the Dom"</h2>
+<p>What followed was probably the most entertaining talk so far at this conference.</p>
+<p><strong>Teddy Kishi</strong> demonstrated what is possible today with CSS3 and Javascript in modern browsers, showing us some of the awesome particle systems he has set up. These included simple experiments like a typical screen-saver-style space simulation to extremely cool animations of waterfalls, fire, snow and CATS.</p>
+<p>All of this of course wouldn't feel as complete if he hadn't covered the popular topic of performance. So he put on several demonstrations of how smooth the particle system behaves if it's based on:</p>
+<ul>
+<li>top/left position OR</li>
+<li>2d translation OR</li>
+<li>3d translation</li>
+</ul>
+<p>I leave it up to you to guess which one is performing best and point you to the slides of the presentation where you can check out the examples yourself: <a title="Link to To the presentation of DOM Particle Systems by Teddy Kishi" href="http://teddyk.be/lab/domparticles/">http://teddyk.be/lab/domparticles/</a></p>
+<h2>"Behind the scenes of the SpiderMonkey Parser API"</h2>
+<p>After that <strong>Michael Ficarra</strong> took us on a journey through some of the internal functionings of what was the first javascript engine ever.</p>
+<p>Besides looking at the parsing process and tokenization of the software, he provided a massive compilation of resources to third party tools in order to test, maintain, monitor and improve our javascript code. Some of these tools are listed below:</p>
+<ul>
+<li><a title="Link to the reflect repository on GitHub" href="https://github.com/zaach/reflect.js" target="_blank">reflect.js</a> - a JavaScript (ES3 compatible) implementation of Mozilla's Parser API.</li>
+<li><a title="Link to the Esprima repository on GitHub" href="https://github.com/ariya/esprima" target="_blank">Esprima</a> - An ECMAScript parsing infrastructure for multipurpose analysis</li>
+<li><a title="Link to escodegen by Consellation" href="https://github.com/Constellation/escodegen" target="_blank">escodegen</a> - an ECMAScript code generator from Parser API</li>
+<li><a title="Link to the esmangle repository by Constellation" href="https://github.com/Constellation/esmangle" target="_blank">esmangle</a> - a mangler / minifier for Parser API</li>
+<li><a title="Link to the sourcemap repository by Mozilla" href="https://github.com/mozilla/source-map" target="_blank">mozilla sourcemap</a> - a library to generate and consume the source map format</li>
+<li><a title="Link to the brushtail repository on GitHub" href="https://github.com/puffnfresh/brushtail" target="_blank">brushtail</a> - Tail call optimisation for JavaScript</li>
+<li><a title="Link to the repository on npm" href="https://npmjs.org/package/complexity-report" target="_blank">complexity report</a> - a tool for reporting code complexity metrics in JavaScript projects</li>
+<li><a title="Link to the istanbul repository on GitHub" href="http://gotwarlost.github.io/istanbul/" target="_blank">istanbul</a> - a javascript coverage tool written in JS</li>
+</ul>
+<p>And last but not least <a title="Link to the sweet.js website" href="http://sweetjs.org/" target="_blank">sweet.js</a>, a JavaScript addon, which brings macros to the language.</p>
+<p>You can check out <a title="Link to the presentation of Michael Ficarra on SpeakerDeck" href="https://speakerdeck.com/michaelficarra/spidermonkey-parser-api-a-standard-for-structured-js-representations" target="_blank">his presentation on SpeakerDeck</a>.</p>
+<h2>"Manage Those dependencies"</h2>
+<p><strong>Jakob Mattson</strong> then challenged the difficult task of waking us up after the lunch break, and yes he did a very decent talk. It was also one of the best in my opinion regarding structure, amount of information provided, as well as quality and simplicity of the slides.</p>
+<p>He introduced several tools that allow us to manage dependencies in complex javascript applications, and to make it short, I'm gonna put together a summary of only the cons of each of the applications are:</p>
+<ul>
+<li>Ender: Don't use it, because it puts all imported libraries into one single namespace, namely the $ symbol, which is extremely inconvenient when you use jQuery</li>
+<li>Browserify: Despite being good at solving the problem of nested dependencies, it bundles everything into one file.</li>
+<li>Require.js: My personal favorite, but Jakob pointed out a disadvantage: It makes it a bit harder to optimize your application</li>
+<li>Jam: This tool claims to put the browser first but still doesn't have a huge index and adds some packaging overhead</li>
+<li>Bower: The solution provided by Twitter is actually an index for packages and thus, won't take you all the way.</li>
+</ul>
+<p>His presentation <a title="Link to Jakob Mattson's talk on SpeakerDeck" href="https://speakerdeck.com/jakobmattsson/manage-those-dependencies" target="_blank">can be found on SpeakerDeck</a> as well.</p>
+<h2>"Serving billions of requests with node.js"</h2>
+<p><strong>Tom Buchok</strong> didn't use a microphone and was one of the few speakers who actually used the stage space to its full potential. You could feel the drive and passion with which he was talking about node.js, Redis and the extent to which he has used these tools to create highly performant web applications.</p>
+<p>In order to properly serve dynamic content &ndash; as opposed to static content which can better be served off CDNs &ndash; he suggests to use streams in order to decrease latency. Since node.js has built in support for downloading data in chunks, this approach allows you to run many concurrent downloads on a single web server.</p>
+<p>Something that web developers don't keep in mind is that error handling matters. Tom pointed out a few scenarios where this can be crucial, such as when sockets are timing out. So passing around errors and dealing with them is an important issue. What's equally important is visibility, in other words to do monitoring, performance measuring and testing. To give an example, many people don't care about exact version matching when adding dependencies to their package.json files, being a potential for bugs that can affect parts of the deployments.</p>
+<p>So far, I haven't found the slides of this talk, but you might want to track <a title="Link to the spain.js event on Lanyrd" href="http://lanyrd.com/2013/spainjs/" target="_blank">the event on Lanyrd</a> to be notified once they are available</p>
+<h2>"Threedee tales of Urban Bohemian"</h2>
+<p>The next talk took me back to the days when studying for a computer graphics exam at University, and as <strong>Vicent Mart&iacute;</strong> stated in of the first slides: 3D is hard &ndash; and I thought: Yes, I remember.</p>
+<p>We then went through the process of building an actual videogame rendertree, at a pace that made taking notes a big challenge. The WebGL library which is part of some modern web browsers can render interactive 3D graphics accessing the computer's GPU. It is however NOT an API for 3D graphics, and it is neither an OpenGL wrapper.</p>
+<p>Setting up a canvas is as easy as writing creating a canvas with <code>canvas.getContext('webgl');</code></p>
+<p>According to <a title="Link to Paul Irish's blog post on requestAnimationFrame" href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/" target="_blank">Paul Irish's research</a>, you should however use the requestAnimationFrame callback when animating things in the browser, because it will <q>reduce CPU, GPU, and memory usage</q>.</p>
+<p>After a short detour to the world of coordinates, matrices and camera perspectives, we got to the topic of shaders, of which the most current and decent browser implementation is the <a title="Link to the Wikipedia page of the OpenGL Shading Language" href="http://en.wikipedia.org/wiki/GLSL" target="_blank">OpenGL Shading Language</a> (abbreviated: GLSL), which &ndash; according to Wikipedia &ndash; gives developers <q>more direct control of the graphics pipeline without having to use hardware-specific languages</q>. Now in order to deal with this kind of technology on a JavaScript level, Vicent recommends using <a title="Link to the three.js library website" href="http://threejs.org/" target="_blank">the three.js library</a>, since it abstracts away the headaches of using 3D in the browser.</p>
+<p>Still &ndash; he summarizes &ndash; is 3D a hard to understand and hard to learn topic. I agree.</p>
+<h2>"The amazing sounds of JS"</h2>
+<p>What we saw afterwards was a brilliant demonstration of JavaScript's Sound API, which is &ndash; according to <strong>Stuart Memo</strong>&nbsp;&ndash; the greatest invention of the last 100 years.</p>
+<p>The guy from Glasgow went on stage, equipped with a guitar and a keyboard. And if Teddy Kishi gave the visually most entertaining speech, this was its acoustic counterpart. After firing up some sine wave and square wave oscillators from the console in order to reproduce basic synthsizer sounds, he showed us some amazing tools he has built on top of the Sound API that I would like to share with you.</p>
+<ul>
+<li><a title="Link to the Web Audio Stylephone by Stuart Memo" href="http://tympanus.net/Tutorials/WebAudioStylophone/" target="_blank">The Web Audio Styleophone</a>: the&nbsp;classic miniature synthesizer based on JavaScript</li>
+<li><a title="Link to the Electro Theremin by Stuart Memo" href="http://questionpark.com/electro-theremin/" target="_blank">Electro-Theremin</a>: the web based version of the&nbsp;space-age instrument on the Beach Boys hit "Good Vibrations"</li>
+<li><a title="Link to Qwery Hancock by Stuart memo" href="http://stuartmemo.com/qwerty-hancock/" target="_blank">Qwerty Hancock</a>: An interactive vector keyboard for your web projects</li>
+<li><a title="Link to the Beat Petite drum machine by Stuart Memo" href="http://stuartmemo.com/beat-petite/" target="_blank">Beat Petite</a>: A very addictive web-based drum machine</li>
+<li><a title="Link to the Conference Crusher by Stuart Memo" href="https://github.com/stuartmemo/conference-crusher" target="_blank">Conference Crusher</a>: A browser based guitar amplifier</li>
+</ul>
+<p>After earning thunderous applause for&nbsp;performing some hits from music history on his funky inventions, he still proved cool enough to ask the critical question:<br />
+"Why?" &ndash; The presentation alone was reason enough, I would say!</p>
+<h2>"Hunting down memory leaks"</h2>
+<p>To round off the day, we got to hear another technical talk, this time from <strong>Jozsef Ferenc Pengo</strong> about JavaScript performance in today's web browsers. Let's start with one of the vital statements of his talk:</p>
+<blockquote><p>"More memoy <em>is not equal</em> better performance"</p></blockquote>
+<p>There is no algorhythm than can decide what you need and what not. Some of the most common mistakes that we do as web developers that lead to memory leaks are the following:</p>
+<ul>
+<li><span style="line-height: 13px;">Browser bugs (Internet Explorer)</span></li>
+<li>Accidently keeping references, such as when not removing DOM references, event handlers or timers</li>
+<li>Framework misuse</li>
+</ul>
+<p>He suggests to use the Chrome Developer Tools and make extensive use of the features "Memory Timeline", "Heap Snapshot" and "Record Heap Allocation" in order to track down potential memory leaks.</p>
+<p>Here's the <a title="Link to Josef Ferenc Pengo's presentation on Prezi" href="http://prezi.com/rnhnbt_3nyhy/hunting-down-memory-leaks-in-javascript/" target="_blank">link to his presentation</a> on Prezi.</p>
+<h2>Conclusion</h2>
+<p>To finish off the evening, we were invited by the Atlassian guys to come to Aleia Chillout in the vibrant district of Chueca. With free mojitos and mexican food, it was the perfect place to unwind and review the conference with some like-minded fellows.</p>
+<p>In my opinion, the conference was a big success. We saw a great variety of different speakers, some well-known names and some potential newcomers. Personally, with all the notes I have taken, I still have a long way to go looking deeper into all the techniques and technologies I have learned about. It is also very inspiring every time to visit such a conference with so many people sharing the same interests.</p>
+<p>Regarding organization, catering, timing, wi-fi availability and speaker quality, this has been a really outstanding event as well.&nbsp;I hope that in 2014 we will see another Spain JS and with this in mind, kudos and congratulation to the organizers for all the efforts to put on this great event. Cheers!</p>

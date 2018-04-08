@@ -1,0 +1,73 @@
+---
+layout: post
+status: publish
+published: true
+title: Boost your web development productivity with these rapid scaffolding tools
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+wordpress_id: 10
+wordpress_url: http://marcelkalveram.com/?p=10
+date: '2013-02-13 12:52:54 +0100'
+date_gmt: '2013-02-13 12:52:54 +0100'
+<!-- categories:
+- Best Practices
+- Web Development
+tags:
+- productivity
+- scaffolding -->
+comments: []
+---
+<p>Recently, scaffolding tools in web development are becoming more and more popular. These tools can help you build your web application more quickly, providing you with shortcuts like an automated build process, image compresson, javascript minification and an integrated lightweight web server.</p>
+<p> <!--more--></p>
+<p>I&#8217;m gonna present four of these tools today, going a bit deeper into how they can help kick-start the development process of your project, which technologies they support and how they can assist you during the life cycle of your application.</p>
+<h2 class="scaffolding">Yeoman - Modern workflow for modern webapps</h2>
+<!-- <p class="scaffolding"><img alt="image" src="http://www.nuhouse.de/specrunner/images/scaffolding/yeoman.png" /></p> -->
+<p>The first candidate comes from the likes of Paul Irish, Addy Osmany and other community fellows that work hard on making the web a better place.</p>
+<p>Yeoman uses <a href="http://gruntjs.com/" title="Link to Grunt.js website" target="_blank">Grunt.js</a> in the background to accomplish a majority of its tasks and&nbsp;during installation, it might prompt you to install some additional dependencies such as OptiPNG or PhantomJS, which Yeoman uses as little helpers to accomplish tasks while compiling.</p>
+<p>After that, you can fire up&nbsp;a command line process that sets up a skeleton for your application. This can be based on commonly used web frameworks such as the popular <a href="http://html5boilerplate.com/" title="Link to HTML5 Boilerplate" target="_blank">HTML5 Boilerplate</a> or <a href="https://github.com/vwall/compass-twitter-bootstrap" title="Link to Twitter Bootstrap for Compass on Github" target="_blank">Twitter Bootstrap for Compass</a>. They&#8217;ll give you a proper starting point for setting up your work on well established community conventions regarding folder structure, cross-browser normalization and equip you with several pre-defined components.</p>
+<p>Furthermore, Yeoman comes with so called&nbsp;<strong>generators</strong> that allow&nbsp;you to extend your projects&#8217; scaffold by using predefined javascript application templates. These are available in several flavors, such as <a href="http://backbonejs.org/" title="Link to Backbone.js" target="_blank">Backbone.js</a>, <a href="http://emberjs.com/" title="Link to EmberJS" target="_blank">Ember.js</a> or <a href="http://angularjs.org/" title="Link to AngularJS" target="_blank">Angular.js</a> . They extend your application infrastructure by adding a basic programming scaffold and testing suites that can then be filled with your own sugar.</p>
+<p>When you&#8217;re ready to deploy your app, the <strong>build command</strong> comes in very handy, as it&nbsp;takes care of all the heavy lifting that many of us are still doing manually: Image compression, compiling preprocessor code like Coffeescript or SASS as well as javascript and CSS minification.</p>
+<p>Almost identically works the built-in <strong>server&nbsp;command</strong>,which will deploy your readily compiled application files and create a lightweight server process, allowing&nbsp;<span>you to instantly open and test your application&nbsp;</span><span>in the web browser.&nbsp;</span><span>In the background, the process will keep on watching for changes, that means, if you change a CSS style or something in your HTML document, it will immediately get updated without you having to refresh the browser.</span></p>
+<p>To sum it up, Yeoman is a great all-rounder to cover the essential scaffolding and automation techniques used by today&#8217;s web development community. Especially the quite extensive topic of generators (<a href="http://yeoman.io/commandline.html" title="Link to Yeoman's Command line documentation" target="_blank">as seen in the documentation</a>) allows for highly customized and tailormade application templates.</p>
+<p><a href="http://yeoman.io/" title="Takes you to the Yeoman website" target="_blank">Link to the Yeoman website</a></p>
+<h2 class="scaffolding">Middleman - Makes developing websites simple</h2>
+<!-- <p class="scaffolding"><img alt="image" src="http://www.nuhouse.de/specrunner/images/scaffolding/middleman.jpg" /></p> -->
+<p>The next tool comes from&nbsp;Thomas Reynolds, the Technical Lead at Instrument, a creative design agency from Portland, Oregon. It&#8217;s essentially a command-line tool for creating static websites, the main difference to Yeoman being that it&#8217;s based on Ruby.</p>
+<p>In order to install Middleman, you have to install the middleman gem, which requires you to have <a href="https://rubygems.org/" title="Link to the RubyGems website" target="_blank">RubyGems</a> installed. Mac OS X ships with these by default.</p>
+<p>You can create projects based on pre-defined project templates, which beside the popular HTML5 Boilerplate include a starter kit based on <a href="https://github.com/dannyprose/Middleman-HTML5BP-HAML" title="Link to the Github repository of Middleman plugin for HAML/SCSS" target="_blank">HAML/SCSS</a> or&nbsp;<a href="http://smacss.com/" title="Link to the SMACSS website" target="_blank">SMACSS</a> (Scalable and Modular Architecture for CSS) scaffold.</p>
+<p>Similar to Yeoman, you can have a local web server fired up which reacts to code changes instantly.</p>
+<p>An interesting feature of Middleman is that inside your templates you can use the built-in <strong>templating language </strong><a href="http://www.stuartellis.eu/articles/erb/" title="Introduction to Ruby's templating language ERb" target="_blank">ERb</a> to take advantage of programming concepts such as if-statements, variables, loops and custom layouts. The latter for instance allows you to use different layouts for each view, based on a specific route that you define in your configuration file.</p>
+<p>Let&#8217;s look into some more advanced features of Middleman:</p>
+<p><strong>Local data</strong> makes it possible to have the data of a page separated from its implementation. This only requires you to set up a separate data folder, where you put&nbsp;<a href="http://en.wikipedia.org/wiki/YAML" title="Link to the Wikipedia article about YAML" target="_blank">YAML</a> files which define certain content variables. In the actual template code, you can use &#8220;placeholders" to access their values.</p>
+<p><strong>Rack middleware&nbsp;</strong>is a feature that provides a way to hook libraries and plugins into the system before the Middleman server processes them. For example, a tidy markup cleaner which indents and formats HTML code the right way or a validator that checks if your markup is in compliance with the W3C established rules.</p>
+<p><strong>Custom extensions </strong>are another method of hooking into the Middleman ecosystem, and need to be activated from your ruby configuration file. Supposing you&#8217;re familiar with the language, you can write your own methods that provide additional features and extensions for your application. An example would be a simple link helper for your view or a sitemap generator for building an XML representation of your site&#8217;s structure with every build.</p>
+<p><a href="http://middlemanapp.com/" title="Takes you to the Middleman website" target="_blank">Link to the Middleman website</a></p>
+<h2 class="scaffolding">Brunch - HTML5 application assembler</h2>
+<!-- <p class="scaffolding"><img alt="image" src="http://www.nuhouse.de/specrunner/images/scaffolding/brunch.gif" /></p> -->
+<p>Brunch is the perfect tool for the sophisticated JS developer that wants to build single-page web applications based on advanced script languages/frameworks.</p>
+<p><span>By default, Brunch comes with <a href="http://chaplinjs.org/" title="Link to Chaplin JS" target="_blank">Chaplin</a>, a Backbone.js based architecture written in Coffeescript. There are numerous alternative application templates which include different preprocessors and javascript frameworks.</span></p>
+<p>The actual Brunch assembler functions the same way as the before-mentioned tools, providing a server and watch process which wraps all scripts and templates in <a href="http://www.commonjs.org/" title="Link to the website of commonJS" target="_blank">common.js</a> modules<strong>, </strong>thus protecting them from&nbsp;public access and <strong>facilitate&nbsp;code encapsulation</strong>. One nice feature is that when you have a desktop tool like growl installed, brunch will automatically let notifications pop up when build errors occur.</p>
+<p>Accompanying the flexible nature and language independency of the framework you have an <a href="https://github.com/brunch/brunch/wiki/Plugins" title="Link to the plugin wiki of brunch.io" target="_blank">extensive plugin repository</a> at your disposal. It includes compilers for script and style languages such as <a href="http://maxtaco.github.com/coffee-script/" title="Link to IcedCoffeeScript" target="_blank">IcedCoffeeScript</a> and <a href="http://livescript.net/" title="Link to the LiveScript website" target="_blank">Livescript</a>, template engines like <a href="http://handlebarsjs.com/" title="Link to the Handlebars website" target="_blank">Handlebars</a>, or <a href="http://mustache.github.com/" title="Link to Mustache" target="_blank">Mustache</a>, plus various minifiers and linters.</p>
+<p><span>One feature that distinguishes brunch from its competitors is <strong>compilation&nbsp;</strong></span><strong>speed</strong>. Unlike Grunt (which Yeoman is built on), it recognizes which parts of your application have changed and compiles things a little bit faster.</p>
+<p><span>Luckily, for those who are completely undecided, the brunch guys were nice enough to provide a </span><strong>comprehensive </strong><a href="http://brunch.io/#compare" title="Link to the compare tamble on brunch.io" target="_blank">compare table</a><span> with other scaffolding tools that points out its advantages and inconveniences to others.</span></p>
+<p><a href="http://brunch.io/" title="Takes you to the brunch.io website" target="_blank"><span>Link to the brunch.io website</span></a></p>
+<h2 class="scaffolding">CodeKit - The Mac app for web developers</h2>
+<!-- <p class="scaffolding"><img alt="image" src="http://www.nuhouse.de/specrunner/images/scaffolding/codekit.jpg" /></p> -->
+<p>For those that are not so familiar with the command line, here comes a tool that is actually a desktop application and can be downloaded directly from their website. It&#8217;s important to mention however that it is Mac only.</p>
+<p>CodeKit comes by default with CSS preprocessors <strong>SASS and Compass</strong>, allowing you to easily set up new projects of this kind in a matter of seconds by using the predefined folder structure. It also supports other preprocessors and frameworks such as <a href="http://lesscss.org/" title="Link to the website of LESS" target="_blank">Less</a>, <a href="http://learnboost.github.com/stylus/" title="Link to the website of Stylus" target="_blank">Stylus</a> and <a href="http://blesscss.com/" title="Link to Bless for CSS" target="_blank">Bless for CSS</a> or <a href="http://jade-lang.com/" title="Link to Jade's website" target="_blank">Jade</a>, <a href="http://haml.info/" title="Link to Haml's website" target="_blank">Haml</a> and <a href="http://incident57.com/codekit/kit.php" title="The Kit templating language" target="_blank">Kit</a>&nbsp;for HTML, the latter being Codekit&#8217;s very own templating solution.</p>
+<p>In the preferences settings, you can change the parameters for each language, telling the program how it should render the output (regular, compressed), check the syntax (JSHint, JSLint), and where to put the &nbsp;resulting output. It&#8217;s like a <strong>user interface for your configuration file</strong>, a thing which in Yeoman (gruntfile.js) or Middleman (config.rb) has to be accomplished manually.</p>
+<p>Once you&#8217;ve got your project up and running, it will be watching for changes and render preprocessor code to the configured folders.&nbsp;<span>Whenever you update something in your file structure, CodeKit will notice it and process the according changes.&nbsp;</span><span>It&#8217;s running subtly in the background and gives advice when necessary, e.g. when there&#8217;s a javascript error that doesn&#8217;t pass the JS Linter test.</span></p>
+<p>In order to collaborate with your team, CodeKit can also export your project specific configuration file in order to easily pass it on to your teammates, so they don&#8217;t have to set up everything again manually.&nbsp;</p>
+<p><span>Compared to the other candidates, CodeKit is not a free tool. After the free trial period of 10 days you&#8217;ll have to pay (at least) 25$ to continue using it.</span></p>
+<p><a href="http://incident57.com/codekit/" title="Takes you to the Codekit website" target="_blank"><span>Link to the CodeKit website</span></a></p>
+<h2>Conclusion</h2>
+<p>As you can see, it&#8217;s almost impossible for us as modern web developers to ignore the tools that are created around our work in order to accomplish things in new and innovative ways.</p>
+<p>The purists among us who have already established certain methods and guidelines are gonna say they&#8217;ll not achieve results any faster this way. I admit that this is usually not the case in the short-term, since you need to change your habits and get familiar with some new techniques.</p>
+<p><span>Depending on the complexity of your project however, you might want to familiarize yourself with some preprocessors and frameworks and notice the difference coming slowly but surely. The learning curve is usually quite steep but after a few month, you might not want to miss out your newly integrated tools anymore.</span></p>
+<p><span>Hope you enjoyed reading this post and gained some new insights that will help boost your producitiy in the long run.</span></p>

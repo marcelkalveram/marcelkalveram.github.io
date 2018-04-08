@@ -1,0 +1,90 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="blog-posts">
+    <h3>{{ page.list_title | default: "Posts" }}</h3>
+
+    <h2 id="{{ this_year }}-ref">2017</h2>
+
+    <ul>
+      <li><a target="_blank" href="https://logbook.hanno.co/lean-flexible-content-contentful/">Lean and flexible content with Contentful</a> <time>4th May 2017</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/mobx-redux-alternative/">MobX: a Redux alternative you should consider</a> <time>9th Mar 2017</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/predict-project-blowouts-risk-matrix/">Predict project blowouts using a risk matrix</a> <time>23rd Feb 2017</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/bitrise-deployment-workflow-react-native/">How to automate your React Native deployment workflow using Bitrise</a> <time>6th Feb 2017</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/prepd-pros-cons-react-native/">Building Prepd: The pros and cons of launching a product with React Native</a> <time>30th Jan 2017</time></li>
+    </ul>
+      
+    <h2 id="{{ this_year }}-ref">2016</h2>
+
+    <ul>      
+      <li><a target="_blank" href="https://logbook.hanno.co/react-native/">Path to React Native: From Rookie to Rockstar</a> <time>29th Jun 2016</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/last-thing-need-programmer/">The last thing you need is a programmer</a> <time>28th Apr 2016</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/design-refugees-berlin/">How we used lean design to help refugees in Berlin</a> <time>22nd Oct 2016</time></li>
+    </ul>
+    
+    <h2 id="{{ this_year }}-ref">2015</h2>    
+    <ul>      
+      <li><a target="_blank" href="https://logbook.hanno.co/oskar-the-slackbot-is-now-open-source/">Oskar the Slackbot is now open source</a> <time>7th Jul 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/oskar-from-idea-to-execution/">Oskar – from idea to execution</a> <time>18th Jun 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/offline-first-matters-developers-know/">Why offline-first matters, and what developers should know about it</a> <time>2nd Jun 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/here-is-the-slackbot-we-built-to-eliminate-remote-isolation/">Here’s the tool we’ve built to overcome remote isolation in our team</a> <time>9th Jun 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/99-of-my-ideas-are-rubbish/">99% of my ideas are rubbish</a> <time>30th Apr 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/a-simple-experiment-a-huge-impact/">A simple experiment, a huge impact</a> <time>24th Apr 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/the-hanno-design-thinking-think-tank/">The Hanno Design Thinking think-tank</a> <time>23th Mar 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/give-yourself-some-headspace/">Give yourself some Headspace</a> <time>19th Feb 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/how-using-angular-js-can-benefit-your-startup/">How using Angular.js can benefit your startup</a> <time>26th Jan 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/10-european-front-end-conferences-to-attend-this-year/">10 European front-end conferences to attend this year</a> <time>19th Jan 2015</time></li>
+      <li><a target="_blank" href="https://logbook.hanno.co/juggling-with-timezone-differences/">Juggling with timezone differences</a> <time>5th Jan 2015</time></li>
+    </ul>
+
+    {% for post in site.posts  %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+      {% if forloop.first %}
+        <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+        <ul>
+      {% endif %}
+
+      <li>
+        {% if post.url_external %}
+          <a href="{{ post.url_external }}" target="_blank">
+        {% else %}
+          <a href="{{ post.url | relative_url }}">
+        {% endif %}
+        {{ post.title | escape }}
+        </a>
+        <time>{{ post.date | date: "%b %d, %Y" }}</time>
+      </li>
+
+      {% if forloop.last %}
+        </ul>
+      {% else %}
+        {% if this_year != next_year %}
+          </ul>
+            <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+          <ul>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="talks">
+        <h3>Talks</h3>
+        <ul>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/lo-mejor-y-peor-de-react-native-valenciajs">“Lo mejor y peor de React Native”</a> - <a href="https://www.meetup.com/es-ES/ValenciaJS/events/238249872/">ValenciaJS</a> <time>Mar 23, 2017</time> </li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/offline-first-the-painless-way">“Offline-first, the painless way”</a> - <a href="https://www.topconf.com/conference//tallinn-2015/talk/offline-first-web-apps-the-painless-way/">TopConf Tallinn</a></a> <time>Nov 18, 2015</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/secret/BJb3Iangb7Hxsc">“Pairing and iterating in cross-functional UX Teams”</a> - <a href="https://www.meetup.com/de-DE/Latvian-Developers-Network/events/219651898/?eventId=219651898">Wildcard Conference Riga</a> <time>May 16, 2015</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/offline-first-the-painless-way">“Offline-first, the painless way”</a> - <a href="http://2015.jsday.it/talk/offline-first-web-apps-the-painless-way/">jsDay Verona 2015</a> <time>May 14, 2015</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/secret/BJb3Iangb7Hxsc">“Pairing and iterating in cross-functional UX Teams”</a> - <a href="https://www.facebook.com/uxmalaysia/">UX Malaysia</a> <time>Nov 29, 2014</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/codemotion-talk-41932602">“Leveraging hood.ie to build for the offline state”</a> - <a href="http://2014.codemotion.es/es/agenda.html?recommended=#day1/leveraging-hoodie-to-build-for-the-offline-state">Codemotion Madrid</a> <time>Nov 21, 2014</time></li>
+          <li><a target="_blank" href="https://www.meetup.com/es-ES/Valencia-Startups/events/184088082/">“Working without boundaries” - <a href="https://www.meetup.com/es-ES/Valencia-Startups/">Valencia Startups</a> <time>May 28, 2014</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/the-mobilewebatasnailspace">“The mobile web – At a snail‘s pace”</a> - <a href="http://valencia.frontenders.me/past/">Frontenders Valencia</a> <time>Sep 12, 2013</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/a-future-friendly-web">“A Future Friendly Web”</a> - <a href="https://betabeers.com/event/betabeers-valencia-840/">Betabeers Valencia</a> <time>Apr 25, 2013</time></li>
+        </ul>
+      </div>
+
+  </div>
+</div>
+

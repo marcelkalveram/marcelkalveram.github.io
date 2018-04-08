@@ -1,0 +1,74 @@
+---
+layout: post
+status: publish
+published: true
+title: Do we need an exchange standard for task data?
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+excerpt: Digital task lists have become an integral part of our lives, but yet there
+  is no universally accepted format for sharing task data across applications.
+wordpress_id: 1060
+wordpress_url: http://marcelkalveram.com/?p=1060
+date: '2013-12-20 07:29:57 +0100'
+date_gmt: '2013-12-20 07:29:57 +0100'
+<!-- categories:
+- Apps
+- Web standards -->
+tags: []
+comments:
+- id: 390
+  author: Peter
+  author_email: p@durlej.me
+  author_url: http://p.durlej.me/
+  date: '2013-12-23 22:56:54 +0100'
+  date_gmt: '2013-12-23 22:56:54 +0100'
+  content: Great post. This is every professional dream to make one ideal work system.
+    Software like Hazel and Automator, both for Mac, and Drafts for iPhone can help
+    you with some kind of import, export data but still there is a lot to improve.
+- id: 10599
+  author: Martin
+  author_email: martin.huber@condesys.com
+  author_url: http://www.geotask.com
+  date: '2016-09-13 21:42:41 +0200'
+  date_gmt: '2016-09-13 19:42:41 +0200'
+  content: How far have you come with the standard task interface? I'd be glad to
+    hear that you made a step forward. Our software manages houndred thousands of
+    tasks related to spatial infrastructure assets and that should go out to people's
+    calenders and task lists. Any suggestion?
+---
+<p>If you are a little bit like me, you care for order and structure. You strive for keeping your life tidy and organized, and you sometimes ponder over new methodologies to make it simpler, and ask yourself which tools could possibly improve your workflow.</p>
+<p>When I set up my list of to-do's every day, I aggregate a lot of stuff from project management tools and emails. I really like the concept of having one list to rule them all, but doing it manually is not fun.<br />
+<!--more--><br />
+Copying and pasting items from one place to another, and readjusting them in more than one tool to keep things in sync is cumbersome, repetitive and redundant. It would be awesome if I could just set up an automatic process that defines how data is being exchanged between applications, and everything just happened automatically.</p>
+<p>An approach that would surely save me a few hours per week and add up to a few days of spare time each year. Another holiday, maybe?</p>
+<h2>The status quo</h2>
+<p>Since digital task lists have become an integral part of people's life, we trust in them to plan our next million dollar startup, our back-packing adventure through India, the weekend cleanup of our household. They are easy to set up, share, and compared to their analogue counterparts, very easy to edit.</p>
+<p>But I have yet to discover a tool which covers everything, from the daily to-do lists, over complex project management to long term objectives. GTD (<a href="http://en.wikipedia.org/wiki/Getting_Things_Done" title="Link to the Wikipedia article of Getting Things Done" target="_blank">Getting Things Done</a>) has taught us how to be in control of our lives, but there doesn't seem to be a digital swiss-army knife tool to tame the distributed and standard-lacking ecosystem of task management data.</p>
+<p>After years of trying out different project management tools I have come to the conclusion that there is no such holistic approach. It makes more sense for organizations to use tailor-made tools and platforms , and each individual has her own preferences regarding functionality and design, not to mention the variety of platform where such tools are set up.</p>
+<h2>A multitude of apps and the lack of standards</h2>
+<p>According to the <a href="http://imjustcreative.com/checkmark-ios-app-icon" title="Link to the hall of shame of checkmark style iOS apps">hall of shame of checkmark style iOS app</a> there are 7655 apps within the productivity category for iPhone. That's about the same amount of times a different, proprietary exchange formats to store and synchronize data.</p>
+<p>And whether you are using Wunderlist, Omnifocus, Producteev, Todooist or Clear; You're probably putting your data into a self-contained silo. It cannot be easily imported or exported, synchronized with another app or shared with others unless you're using the same application.</p>
+<p>Sure, there is RSS and CalDAV, which allows for a certain degree of exchangeability but are not specifically designed for that purpose. And some programs synchronize data between their desktop and mobile app, which is already a big step forward compared to where we have been ten years ago. But I'm surprised that &ndash; according to my research &ndash; nobody has ever come with such an approach that would allow applications to speak to each other.</p>
+<h2>What needs to be done?</h2>
+<p>Just as with web standards, which facilitated a more streamlined and painless approach to web development, task data &ndash; whose use I consider to be similarly widespread &ndash; deserves a universally accepted standard as well, if we want to pave the way for a more open and collaborative ecosystem of task management software.</p>
+<p>And from my perspective it is a rather straightforward approach, that only some market leaders would need to wrap their minds around. Since task data across most applications and platforms has very common parameters, they would only have to agree upon a basic format that includes key parameters such as due date, category and assignee. Optional parameters can be added by applications with more complexity, but will be ignored by those without. </p>
+<p>It can be a simple, light-weight collection of JSON objects which each program is able to read, write, and synchronize with their peers via public interfaces.</p>
+<p>I hope that in the future someone who is more credible and respected than me will come up with a solution, and that companies will start dealing with architecture, the implementation of standardized APIs and agree upon a flexible, future-proof standard.</p>
+<h2>Additional resources</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CalDAV" title="Link to the Wikipedia article about CalDAV" target="_blank">CalDAV - An internet standard for scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RSS" title="Link to the Wikipedia article about RSS" target="_blank">RSS - A family of standard web feed formats</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SyncML" title="Link to the Wikipedia page of SyncML" target="_blank">SyncML - A former platform-independent information synchronization standard</a></li>
+<li><a href="http://syncbits.com/" title="Link to the website of SyncML" target="_blank">Syncbits - Connecting your apps between devices</a></li>
+<li><a href="http://www.isynctasks.de/ title="Link to the website of iSyncTasks" target="_blank">iSyncTasks - Share Google tasks with your beloved</li>
+<li><a href="http://www.yoxel.com/" title="Link to the website of Yoxel" target="_blank">Yoxel - A cloud-based sync software</a></li>
+<li><a href="https://fruux.com/" title="Link to the website of Fruux" target="_blank">Fruux - Synchronization of contacts, calendars & tasks</a></li>
+</ul>
+<h2>What are your thoughts on the topic?</h2>
+<p>Are you having the same troubles synchronizing task data between applications? Or did you already find the Swiss army knife tool for your purpose? Do you have any ideas on how to leverage a universal standard, or do you think the problem doesn't really exist? I'm open to hear your thoughts in the comments.</p>

@@ -1,0 +1,115 @@
+---
+layout: post
+status: publish
+published: true
+title: Every developer's most hated discipline
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+wordpress_id: 1200
+wordpress_url: http://marcelkalveram.com/?p=1200
+date: '2014-01-31 19:41:17 +0100'
+date_gmt: '2014-01-31 19:41:17 +0100'
+<!-- categories:
+- Web Development -->
+tags: []
+comments:
+- id: 8477
+  author: creating android application
+  author_email: brigidabeatty@gawab.com
+  author_url: http://www.babieka.com/knowledgebase/MabelvsGoodrichnq
+  date: '2014-10-17 02:41:26 +0200'
+  date_gmt: '2014-10-17 02:41:26 +0200'
+  content: "I totally disagree with you, buut I need to say that you bbring \r\nsome
+    new perspectives to the table. What kind of research work \r\ndo you do when writing
+    posts like this?"
+- id: 10503
+  author: Lukas
+  author_email: mail@lukaslen.at
+  author_url: http://lukaslen.at
+  date: '2016-06-04 11:05:57 +0200'
+  date_gmt: '2016-06-04 09:05:57 +0200'
+  content: The struggle is real!
+- id: 10525
+  author: James Miodonski
+  author_email: james@creatomatic.co.uk
+  author_url: http://www.creatomatic.co.uk
+  date: '2016-06-29 20:44:10 +0200'
+  date_gmt: '2016-06-29 18:44:10 +0200'
+  content: "Hey Marcel - thanks very much for the shout out about our Pre-Launch Checklist
+    - I just spotted that we'd moved the page to a new URL (I know - nothing like
+    practicing what we preach!) - it's now at:\r\n\r\nhttp://www.creatomatic.co.uk/pre-lauch-checklist/\r\n\r\nKeep
+    up the good work!  All the best from sunny Scotland!\r\n\r\nJames M - Creatomatic"
+- id: 10858
+  author: General Cube
+  author_email: michal.mucha.kr@gmail.com
+  author_url: http://bootstrap.grandnode.com/
+  date: '2017-01-18 00:43:06 +0100'
+  date_gmt: '2017-01-17 23:43:06 +0100'
+  content: Hej great article, why don't you tell about some trick to fix some most
+    common  issues (line height, max heught) like compare elements of CSS used to
+    deal with some front end and it's obvious to use in chrome /  firefox etc. but
+    IE ...  You known.
+---
+<p>Who doesn't hate browser testing? There are probably few things more disappointing than firing up your website in an environment that is not your own, just to realize that everything gets screwed up. <!--more--></p>
+<p>Not to mention the effort that goes into documenting the errors, and somehow squeeze the work of bug fixing into your already crammed agenda. (let's ignore for the moment the endless time that goes into making your HTML5/CSS3 wizardry work in Internet Explorer 8...)</p>
+<h2>What's the problem?</h2>
+<p>As it happens with highly unpleasant tasks, we postpone them, until they pop up as "urgent" or "unavoidable". Too late, you didn't plan enough time for testing, the stuff has to go live, and the uncertainty remains, until the overeager intern from your client's office proudly points out your imperfection.</p>
+<p>At this point we have already lost part of the trust that the client had in our superhuman web crafting abilities. We are now another average web design service provider, and have to make up for our lack of professionalism.</p>
+<p>Let's rewind to the beginning of the project and see what we could have done differently...</p>
+<h2>What to test</h2>
+<p>An important question when it comes to testing is <strong>what</strong> you want to test.</p>
+<p>Unless you have a dedicated laboratory with a team of interns that operate day and night, you won't be able to test on each and every device out there, and you're probably better off choosing the right ones.</p>
+<p>Usually, a client has been running a tracking tool like Google Analytics, so you can get quite reliable data about your target group. Pick the most common browsers, operation systems and devices and make a list of priorities. </p>
+<p>The list usually looks something like this:</p>
+<ol>
+<li><strong>A-Grade browsers</strong> &ndash; You're probably developing in one of these: Chrome, Firefox, Safari...</li>
+<li><strong>Internet Exploder</strong> &ndash; Still the biggest pain in web development, that usually blows up everything...</li>
+<li><strong>Mobile devices</strong> &ndash; High fragmentation: Use your analytics data to gain more insights</li>
+</ol>
+<p>For the mobile devices, if you don't have any analytics data, go to sites like <a href="http://gs.statcounter.com/" title="Link to the website of Statscounter" target="_blank">statscounter.com</a> or <a href="http://screensiz.es/phone" title="Link to the website of screensiz.es" target="_blank">screensiz.es</a> to see what people are usually using to browse the web in your country.<br />
+You should come up with a list of the most common devices, operating systems and screen sizes.</p>
+<p>The following screenshot illustrates some example data from Google Anayltics, which reveals that if we haven't tested on a Windows PC with Internet Explorer 8 and a screen resolution of 1280x800px we have completely missed our target group.</p>
+<p><img src="http://marcelkalveram.com/wp-content/uploads/2014/01/Browser-Statistics-Google-Analytics.jpg" alt="Browser statistics from Google Anayltics" width="760" height="437" class="alignnone size-full wp-image-1288" /></p>
+<p>Time to take a deep breath...</p>
+<h2>How to test</h2>
+<p>There are many ways to test and debug your websites, the best of course being able to test in a native environment. Since you probably don't have all the devices at hand, there are some online tools to help you out to at least simulate that experience:</p>
+<ul>
+<li><a href="http://www.browserstack.com/" title="Link to the website of Browserstack" target="_blank">Browserstack</a> - A browser environment to test on a huge variety of platforms</li>
+<li><a href="http://www.testize.com/" title="Link to the website of Testize" target="_blank">Testize</a> - Checks your website based on a variety of factors including cross-browser compatibility</li>
+<li><a href="https://browserling.com/" title="Link to the website of Browserling" target="_blank">Browserling</a> - A tool for Interactive cross-browser testing</li>
+</ul>
+<p>Personally, I have made good experience with the virtual machines that Microsoft is offering on <a href="http://modern.ie" title="Testing for Internet Explorer made simple with virtual machines" target="_blank">modern.ie</a>.</p>
+<p><strong>Important</strong>: If you don't have an SSD drive, you are probably not going to use your VMs a lot, because they will be horribly slow (I've gone through it). The testing results are usually painful enough, so your working environment should at least be fast and efficient.</p>
+<p>Another big challenge is mobile debugging (due to the absence of development tools in mobile browsers), but luckily there are some tools out there to close the gap, of which I use the following on a regular basis:</p>
+<ul>
+<li><a href="http://html.adobe.com/edge/inspect/" title="Link to the website of Adobe Edge Inspect" target="_blank">Adobe Edge Inspect</a> - Allows you to do synchronized remote debugging from your desktop browser.</li>
+<li><a href="http://www.charlesproxy.com/" title="Link to the website of Charles Proxy" target="_blank">Charles</a> - A great tool to inspect the network traffic on your mobile phone.</li>
+</ul>
+<p>For more info about mobile debugging, I have written <a href="http://marcelkalveram.com/2012/10/3-essential-debugging-tools-for-mobile-applications/" title="Article on marcelkalveram.com about mobile debugging" target="_blank">an article about it some time ago</a>.</p>
+<h2>Make it a habit</h2>
+<p>Postponing tests until the very end is actually a pretty fundamental misconception of priorities, and it can be as dramatic as buying presents on the last day of Christmas.</p>
+<p>The procedure is a lot easier when running short, weekly development cycles and quick testing sessions at the end of each. This takes the tension of having to deal with all the uncertainty at the very end of the project, leaving less room for unexpected pitfalls and massive bug issues.</p>
+<p>However since cross-browser testing is extremely boring, we tend to procrastinate it most of the time.</p>
+<p><img src="http://marcelkalveram.com/wp-content/uploads/2014/01/Internet-Explorer-Meme.jpg" alt="Internet Explorer Meme" width="880" height="404" class="alignnone size-full wp-image-1325" /></p>
+<p>Looks familiar?</p>
+<p>Well, when you have to deal with a lot of frontend code, I would recommend to keep 20 minutes at the end of the day free for testing. Fire up the virtual machine or one of the above mentioned tools with your most hated environment or browser (or just the one that you're most preoccupied about). </p>
+<p>Focus on one single environment, write down what you observe, and go home. Don't start fixing anything yet. You might be in a rage, and get obsessed with implementing quick and dirty workarounds... </p>
+<p>Instead, step back from the trouble. I'll promise that the next morning, after having reassessed the issues, you'll have the necessary calmness and accuracy to implement a proper solution.</p>
+<h2>Wrapping up</h2>
+<p>I guess that if you are a developer you can somehow relate to what I said and I'm sure you have gone through similar situations during your career. And those of us who have worked in the business since the days of Mosaic and Netscape Navigator know what it's like to deal with really bad rendering engines.</p>
+<p>Although web standards have paved the way for a better future, we still have to test as much as possible to make our sites perform well in every browser, and due to the high fragmentation in the mobile market, on all devices as well.</p>
+<p>I hope that the tools and ideas I've shared will help you to gain the right focus and attitude to do what's necessary to develop a better testing routine. If you have any tipps or inspiration on how to improve one's cross browser strategy, feel free to let us know in the comments. </p>
+<p>Thanks for reading.</p>
+<h2>Additional resources</h2>
+<ul>
+<li><a href="http://crossbrowsertesting.com/" title="Link to the website of Cross Browser Testing" target="_blank">Cross Browser Testing</a> - A service to check your website on a variety of platforms</li>
+<li><a href="http://launchlist.net/" title="Launchlist - a tool to check your website before launching" target="_blank">launchlist.net</a> - The ultimate website checklist application</li>
+<li><a href="http://www.creatomatic.co.uk/about/blog/pre-lauch-checklist/" title="Link to a pre-launch browser checklist from Creatomatic" target="_blank">Pre-launch checklist</a> A free cross-browser checklist from the guys at Creatomatic</a></li>
+<li><a href="http://quirktools.com/screenfly/">Screenfly</a> - An intuitive browser tool to test your website on various devices and screen resolution</li>
+</ul>

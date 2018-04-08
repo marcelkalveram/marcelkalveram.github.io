@@ -1,0 +1,65 @@
+---
+layout: post
+status: publish
+published: true
+title: Performance Checklist For the Mobile Web
+author:
+  display_name: marcelkalveram
+  login: marcelkalveram
+  email: marcel.kalveram@googlemail.com
+  url: http://marcelkalveram.com
+author_login: marcelkalveram
+author_email: marcel.kalveram@googlemail.com
+author_url: http://marcelkalveram.com
+wordpress_id: 4
+wordpress_url: http://marcelkalveram.com/?p=4
+date: '2013-05-14 18:51:14 +0200'
+date_gmt: '2013-05-14 18:51:14 +0200'
+<!-- categories:
+- Mobile
+- Performance -->
+tags: []
+comments: []
+---
+<p>A short while ago I saw <a title="Performance Checklist for the Mobile Web on Youtube" href="http://www.youtube.com/watch?v=0UNWi7FA36M">this great video on Youtube about web page performance on mobile browsers by Colt McAnlis</a>, a developer advocate at Google which was held at <a title="Link to the website of HTML5 Dev Conf" href="http://html5devconf.com/" target="_blank">HTML5 DevConf</a> in San Francisco. <!--more--></p>
+<p>For those of you who don&rsquo;t have time to watch the entire talk, I would like to briefly summarize what has been said, as I consider some of the points very useful in order to improve page load times on smartphones.</p>
+<p>First of all, we can roughly split up the topic into three pillars of web performance:</p>
+<ul>
+<li><span>Network performance</span></li>
+<li><span>Render performance</span></li>
+<li><span>Compute performance</span></li>
+</ul>
+<p>In the network performance part, Colt talks about the following three aspects:</p>
+<ul>
+<li>Why is mobile slower: As a matter of fact, cell phones are just a <a title="Link to the Wikipedia article of amateur radios" href="http://en.wikipedia.org/wiki/Amateur_radio_operator" target="_blank">HAM radio operator</a> and only enabling a network connection can take up to 1-2 seconds, which compared to the 3s tolerance before 50% of users abandon your page leaves you with 1s for your page to load.</li>
+<li>The trouble with images: Many pages still download full-sized images on mobile devices and the compression is not optimal, we should start establishing new formats such as the <a title="Link to the Google project page of the web-p format" href="https://developers.google.com/speed/webp/" target="_blank">web-p format</a>.</li>
+<li>Your content is too raw-large: A lot of websites still serve their CSS and JS files uncompressed, although it is easy to set up compression and it saves the user a lot of bandwidth.</li>
+</ul>
+<p>In the render performance part, he covers the following topics:</p>
+<ul>
+<li>What&rsquo;s your render-weight? It&rsquo;s actually quite important to have in mind the rendering mechanisms of browsers. Though being very advanced you should consider what happens in the background when using CSS features like border-radius or box-shadow. More about this topic can be found in <a href="http://www.html5rocks.com/en/tutorials/speed/css-paint-times/" target="_blank">his article on HTML5 Rocks</a></li>
+<li>The trouble with images #2: Apart from downloading massive image data, a browser also has to deal with decoding and resizing them. This can take a significant amount of time and should be tackled with responsive image techniques such as <a title="Link to the Github project of Picture Fill from Scott Jehl" href="https://github.com/scottjehl/picturefill" target="_blank">Picture Fill by Scott Jehl</a></li>
+<li>Reflows are the devil: This refers to scripts that redraw elements depending on specific page dimensions. As an example, Colt shows a script that redraws everything on the page piece by piece, which leads to the problem that with every loop the browser waits for the page height to be calculated before it goes into the next iteration. Something which leads to very poor performance.</li>
+</ul>
+<p>In the compute performance part, Colt talks mainly about the following issue:</p>
+<ul>
+<li>Static memory javascript: Due to its dynamic nature, javascript allows us to define variables wherever and whenever we want. This leads to the problem that the garbage collecter, which takes care of freeing up memory in a predefined interval which we have no control over, causes little performance delays whenever it does its job. This can be during a mouse click, while scrolling or during an animation. In order to prevent this from happening, we should predefine ALL our variables beforehand by calculating the max footprint of our applications.</li>
+<li>This can be achieved with the help of Chome&rsquo;s built-in developer tools which can be found in the profile tab and allow you to measure CPU as well as memory performance of your javascript code.</li>
+</ul>
+<p>Last but not least, Colt has put together a checklist for the mobile web which summarizes the above-mentioned performance issues:</p>
+<ul>
+<li>Use advanced data-compression for image transfer</li>
+<li>Use proper xfer protocols for fast-as-possible speeds</li>
+<li>Batch network communication through the radio</li>
+<li>Reduce page render-weight</li>
+<li>Reduce image-resizs times by scaling down images for mobile</li>
+<li>Batch reads/writes to the DOM</li>
+<li>Move towards static-memory usage patterns
+<ul>
+<li>Know your growth rate</li>
+<li>Know your max memory footprint</li>
+<li>Preallocate</li>
+</ul>
+</li>
+</ul>
+<div class="attribution">(<span>Source:</span> <a href="http://www.youtube.com/">http://www.youtube.com/</a>)</div>

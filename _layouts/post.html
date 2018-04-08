@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <div class="container">
+
+        <div class="post-meta">
+          <span class="dt-published">
+            Published:
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              {{ page.date | date: date_format }}
+            </time>
+          </span>
+          <a class="back-to-home" href="/">&laquo; Back to home</a>
+        </div>        
+      
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+          </header>
+        
+          <div class="post-content e-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+        
+          {%- if site.disqus.shortname -%}
+            {%- include disqus_comments.html -%}
+          {%- endif -%}
+        
+        </article>
+      
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
+
+
+
+
+
