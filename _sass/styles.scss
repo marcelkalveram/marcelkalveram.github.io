@@ -469,8 +469,23 @@ time {
   }
 }
 
+.post-content {
+  padding-top: .25em;
+}
+
+.post-image {
+  position: relative;
+  .image-credit {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
 .post {
   max-width: 100%;
+  font-size: 1.25em;
+  line-height: 1.66;
   p {
     margin: 0.75em 0;
   }
@@ -521,13 +536,13 @@ time {
     font-weight: 300;
     margin-bottom: 0;
     padding-bottom: 0;
-    color: #999;
+    color: #666;
   }
 
   ul {
     list-style: disc;
     padding: 0 0 0 1rem;
-    margin: 1em 0 1em 1em;
+    margin: 0.75em 0 0.75em 1em;
   }
 }
 
