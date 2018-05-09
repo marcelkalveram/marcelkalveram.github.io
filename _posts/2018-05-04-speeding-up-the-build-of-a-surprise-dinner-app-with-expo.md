@@ -41,7 +41,7 @@ Tasks in this project included:
 
 ## The solution
 
-I had built several React Native apps before and knew how tricky it would be to implement specific behaviour or components using third-party plugins. 
+I had built several React Native apps before and knew how tricky it would be to implement custom styling or third-party components. 
 
 That’s why I chose Expo in this case, because it provides several predefined components for each of the above mentioned scenarios by default: 
 
