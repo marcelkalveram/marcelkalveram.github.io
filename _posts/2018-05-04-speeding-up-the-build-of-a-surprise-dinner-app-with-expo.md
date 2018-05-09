@@ -21,7 +21,7 @@ tags: []
 comments: []
 ---
 
-React Native can be hard. But a lot of the heavy lifting can be done by <a href="https://expo.io/" target="_blank">Expo</a>.
+React Native can be hard. But a lot of the heavy lifting can be done by its open source companion toolchain <a href="https://expo.io/" target="_blank">Expo</a>.
 
 Recently, I helped Valencian startup <a href="https://uncovercity.com/" target="_blank">uncovercity</a> build a mobile app to accompany their surprise dinner experience. 
 
