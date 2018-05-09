@@ -65,19 +65,19 @@ Things got more complicated when we found out that the ride-sharing service’s 
 
 <!-- That sounds like a no-go. But, according to the startup principle "work with the limited resources you have at your disposal" we didn’t really have another option. -->
 
-### Displaying markers on Expo’s MapView component
+### Displaying markers with Expo’s MapView component
 
-The experience of working with Expo’s map to display live markers on the map is pretty straightforward. 
+The experience of working with Expo’s <a href="https://docs.expo.io/versions/latest/sdk/map-view" target="_blank">MapView</a> to display live markers on the map is pretty straightforward. 
 <pre>
 <MapView
   ref={(ref) => { this.map = ref; }}
   provider="google"
-  initialRegion={{
+  initialRegion={ {
       latitude: experience.restaurant.local_latitude,
       longitude: experience.restaurant.local_longitude,
       latitudeDelta: LATITUDE_DELTA,
       longitudeDelta: LONGITUDE_DELTA,
-  }}
+  } }
   customMapStyle={STYLES.MAP}
   onLayout={() => this.onMapLayoutSuccess()}
   >
@@ -120,9 +120,11 @@ The experience of working with Expo’s map to display live markers on the map i
 Updating coordinates is also really simple:
 A JavaScript interval fires a redux-thunk event to dispatch a new API request every second. The response then gets processed by a redux reducer and the data sent to the view. Once the MapView <a href="https://github.com/react-community/react-native-maps/blob/master/docs/marker.md">Marker</a> receives the new coordinates, it updates its position instantly.
 
-The Map component also makes it easy to center the map based on a set of markers and animate it smoothly with every udpate, using its `fitToSuppliedMarkers` method. Unfortunately though, the method doesn’t allow for any padding (unlike its `fitToCoordinates` counterpart) to make sure the markers don’t overlap with other elements on the screen.
+### Fitting the map to a set of supplied markers
 
-Luckily, the community provides a solution that’s very easy to implement:
+The MapView component also makes it easy to focus the map on a set of markers and animate it smoothly to show the corresponding area of the map with every update, using its `fitToSuppliedMarkers` method. Unfortunately though, the method doesn’t allow for any padding (unlike its `fitToCoordinates` counterpart) to make sure the markers don’t overlap with other overlaying elements on the screen.
+
+Luckily, the <a href="https://github.com/react-community/react-native-maps/issues/1149#issuecomment-344883668" target="_blank">community provides a solution</a> that’s very easy to implement:
 
 <pre>
 fitToSuppliedMarkersCustom(coordinates) {
