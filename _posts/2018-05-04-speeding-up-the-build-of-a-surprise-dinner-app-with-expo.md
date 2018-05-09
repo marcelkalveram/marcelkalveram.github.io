@@ -3,6 +3,10 @@ layout: post
 status: publish
 published: true
 title: Speeding up the build of a surprise dinner app with Expo for React Native
+header_image: '/assets/images/todd-diemer-113294-unsplash.jpg'
+image_credit:
+  handle: todd_diemer
+  name: Todd Diemer
 author:
   display_name: marcelkalveram
   login: marcelkalveram
@@ -26,8 +30,14 @@ Recently, I helped Valencian startup <a href="https://uncovercity.com/" target="
 Tasks in this project included:
 
 - showing an introductory video header in the app to the user to get them excited about the experience
-- picking up a client and showing the current position of the client’s taxi (a <a href="https://www.cabify.com/" target="_blank">Cabify</a> in this case) on a map for both, the journey to the restaurant and back
-- showing several popups indicating the current status of the user's experience (e.g. Cabify on its way, Cabify arrived, Cabify arrived at restaurant) and sending a push notification for each status change
+- picking up the user at a specific location using a ride-sharing API and showing the current position of the client’s ride on a map
+- showing several popups indicating the current status of the user's experience (e.g. taxi on its way, taxi arrived, taxi arrived at restaurant) and sending a push notification for each status change
+
+<p class="images clearfix">
+  <img src="/assets/images/screenshots/uncovercity-experience.jpg" />
+  <img src="/assets/images/screenshots/uncovercity-pickup.jpg" />
+  <img src="/assets/images/screenshots/uncovercity-popup.jpg" />
+</p>
 
 ## The solution
 
@@ -58,10 +68,10 @@ Even trivial things like using Expo's <a href="https://docs.expo.io/versions/lat
 
 ### What about testing?
 
-To wrap up, testing the app on your phone is a piece of cake as well. <a href="https://itunes.apple.com/us/app/expo-client/id982107779?mt=8" target="_blank">Expo Client</a> allows you to immediately preview and test the app on your phone in within minutes, allowing you to see changes in real-time. Pretty awesome, isn’t it?
+To wrap up, testing the app on your phone is a piece of cake as well. <a href="https://itunes.apple.com/us/app/expo-client/id982107779?mt=8" target="_blank">Expo Client</a> allows you to immediately preview and test the app on your phone within minutes, allowing you to see changes in real-time. Pretty awesome, isn’t it?
 
 # Future posts on this project
 
-I’ll write a few more posts about my experience building the uncovercity app, especially how we did the Cabify integration using their production API for testing (yep, you read that right) and what I learned from doing some real life user tests going out for dinner with uncovercity myself.
+I’ll write a few more posts about my experience building the uncovercity app, especially how we did the API integration and what I learned from doing some real life user testing going out for dinner with uncovercity myself.
 
 I’ll keep you posted.
