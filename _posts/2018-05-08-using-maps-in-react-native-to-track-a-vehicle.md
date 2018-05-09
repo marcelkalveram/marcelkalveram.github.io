@@ -21,12 +21,12 @@ tags: []
 comments: []
 ---
 
-Recently, I had the pleasure to tackle an interesting challenge while working on the iOS app for <a href="https://uncovercity.com/" target="_blank">uncovercity.com</a>.
+Recently, I had the pleasure to experiment with maps and API integration in React Native while working on the iOS app for <a href="https://uncovercity.com/" target="_blank">uncovercity.com</a>.
 
-The challenge can be summarised very easily: 
+The challenge that turned out to require a very lean approach can be summarised very easily:
 
 1. a car (ordered via a ride-sharing app) picks you up at a specific location and takes you to a surprise dinner at an unknown venue.
-2. when youre dinner is over, you can use the app to order a ride home.
+2. when your dinner is over, you can use the app to order a ride home.
 
 What made the challenge even more interesting was that we were forced to test the ride-sharing part of the app in production from the start, so we were constantly in touch with drivers and sitting in fancy cars with a phone in our hands and a computer on our laps.
 
