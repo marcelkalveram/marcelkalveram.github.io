@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Tracking a vehicle in React Native using Expo's MapView and the lean approach
+title: Battletesting a ride-sharing API with React Native maps
 header_image: '/assets/images/samuel-foster-362611-unsplash.jpg'
 image_credit:
   handle: samuelfoster
