@@ -34,9 +34,9 @@ Tasks in this project included:
 - showing several popups indicating the current status of the user's experience (e.g. taxi on its way, taxi arrived, taxi arrived at restaurant) and sending a push notification for each status change
 
 <p class="images clearfix">
-  <img src="/assets/images/screenshots/uncovercity-experience.jpg" />
-  <img src="/assets/images/screenshots/uncovercity-pickup.jpg" />
-  <img src="/assets/images/screenshots/uncovercity-popup.jpg" />
+  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-experience.jpg"></amp-img>
+  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-pickup.jpg"></amp-img>
+  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-popup.jpg"></amp-img>
 </p>
 
 ## The solution

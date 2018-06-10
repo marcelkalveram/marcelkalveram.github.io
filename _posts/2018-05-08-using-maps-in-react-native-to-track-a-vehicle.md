@@ -35,9 +35,9 @@ What made the challenge even more interesting was that we were forced to test th
 To make the experience as pleasant and predictable as possible for the user, we implemented a live map showing the current position of the vehicle when it's underway, for both the pickup and the return journey.
 
 <p class="images clearfix">
-  <img src="/assets/images/screenshots/uncovercity-pickup.jpg" />
-  <img src="/assets/images/screenshots/uncovercity-search.jpg" />
-  <img src="/assets/images/screenshots/uncovercity-return.jpg" />
+  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-pickup.jpg"></amp-img>
+  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-search.jpg"></amp-img>
+  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-return.jpg"></amp-img>
 </p>
 
 In the screenshot above, you can see the different states of the app:

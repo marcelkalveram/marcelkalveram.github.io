@@ -102,7 +102,7 @@ textarea {
  */
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 /*
@@ -196,11 +196,11 @@ textarea {
     *:after,
     *:first-letter,
     *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        background: transparent;
+        color: #000; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
+        box-shadow: none;
+        text-shadow: none;
     }
 
     a,
@@ -247,7 +247,7 @@ textarea {
     }
 
     img {
-        max-width: 100% !important;
+        max-width: 100%;
     }
 
     p,
@@ -490,6 +490,22 @@ time {
     display: inline-block;
     border-radius: 3px;
   }
+  .image-credit-inner {
+    display: inline-block;
+    padding: 2px 3px;
+  }
+  .image-credit-svg {
+    height: 12px;
+    width: auto;
+    position: relative;
+    vertical-align: middle;
+    top: -1px;
+    fill: white;
+  }
+  .image-credit-name {
+    display: inline-block;
+    padding: 2px 3px;
+  }
 }
 
 .post {
@@ -510,7 +526,7 @@ time {
 
   .images {
     margin: 1rem 0;
-    img {
+    .img {
       display: block;
       float: left;
       width: 32%;
