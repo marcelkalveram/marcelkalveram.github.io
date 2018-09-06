@@ -4,67 +4,91 @@ layout: default
 
 <div class="home">
   <div class="blog-posts">
-    <h3>{{ page.list_title | default: "Posts" }}</h3>
+    <h3>{{ page.list_title | default: "Blog posts" }}</h3>
 
-    {% for post in site.posts  %}
-      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-      {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% for post in site.posts %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
-      {% if forloop.first %}
-        <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-        <ul>
+    {% if forloop.first %}
+    <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+    <ul>
       {% endif %}
 
       <li>
         {% if post.url_external %}
-          <a href="{{ post.url_external }}" target="_blank">
-        {% else %}
+        <a href="{{ post.url_external }}" target="_blank">
+          {% else %}
           <a href="{{ post.url | relative_url }}">
-        {% endif %}
-        {{ post.title | escape }}
-        </a>
-        <time>{{ post.date | date: "%b %d, %Y" }}</time>
+            {% endif %}
+            {{ post.title | escape }}
+          </a>
+          <time>{{ post.date | date: "%b %d, %Y" }}</time>
       </li>
 
       {% if forloop.last %}
-        </ul>
-      {% else %}
-        {% if this_year != next_year %}
-          </ul>
-            <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-          <ul>
-        {% endif %}
+    </ul>
+    {% else %}
+    {% if this_year != next_year %}
+    </ul>
+    <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+    <ul>
       {% endif %}
-    {% endfor %}
+      {% endif %}
+      {% endfor %}
 
-    <div class="clients">
-      <h3>Projects</h3>
-      <ul>
-        <li><a href="https://uncovercity.com/" target="_blank">uncovercity</a> - build of a mobile app in React Native to augment the real life product experience</li>
-        <li><a href="https://www.guruwalk.com/" target="_blank">GuruWalk</a> - improvement of the web &amp; mobile interface to increase conversions</li>
-        <li><a href="http://www.adsnap.co.uk/" target="_blank">AdSnap</a> - build of a mobile prototype in React Native to validate their product idea</li>
-        <li><a href="https://www.getprepd.com/" target="_blank">Prepd</a> - build of a production-ready mobile app with React Native for iOS and Android</li>
-        <li><a href="https://www.ava.me/" target="_blank">Ava</a> - improvement of the web &amp; mobile UX in React using the lean approach</li>
-        <li><a href="https://ncubehome.co.uk/" target="_blank">nCube</a> - migration of a mobile prototype from jQuery Mobile to Mobile Angular UI</li>
-        <li><a href="http://mirror.co/" target="_blank">Mirror</a> - UX optimisations of the web &amp; mobile UI in AngularJS using an API-driven approach</li>
-      </ul>
-    </div>
-
-    <div class="talks">
-        <h3>Talks</h3>
+      <div class="clients">
+        <h3>Projects I've worked on</h3>
         <ul>
-          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/lo-mejor-y-peor-de-react-native-valenciajs">“Lo mejor y peor de React Native”</a> - <a href="https://www.meetup.com/es-ES/ValenciaJS/events/238249872/">ValenciaJS</a> <time>Mar 23, 2017</time> </li>
-          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/offline-first-the-painless-way">“Offline-first, the painless way”</a> - <a href="https://www.topconf.com/conference//tallinn-2015/talk/offline-first-web-apps-the-painless-way/">TopConf Tallinn</a></a> <time>Nov 18, 2015</time></li>
-          <li><a target="_blank" href="https://de.slideshare.net/secret/BJb3Iangb7Hxsc">“Pairing and iterating in cross-functional UX Teams”</a> - <a href="https://www.meetup.com/de-DE/Latvian-Developers-Network/events/219651898/?eventId=219651898">Wildcard Conference Riga</a> <time>May 16, 2015</time></li>
-          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/offline-first-the-painless-way">“Offline-first, the painless way”</a> - <a href="http://2015.jsday.it/talk/offline-first-web-apps-the-painless-way/">jsDay Verona 2015</a> <time>May 14, 2015</time></li>
-          <li><a target="_blank" href="https://de.slideshare.net/secret/BJb3Iangb7Hxsc">“Pairing and iterating in cross-functional UX Teams”</a> - <a href="https://www.facebook.com/uxmalaysia/">UX Malaysia</a> <time>Nov 29, 2014</time></li>
-          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/codemotion-talk-41932602">“Leveraging hood.ie to build for the offline state”</a> - <a href="http://2014.codemotion.es/es/agenda.html?recommended=#day1/leveraging-hoodie-to-build-for-the-offline-state">Codemotion Madrid</a> <time>Nov 21, 2014</time></li>
-          <li><a target="_blank" href="https://www.meetup.com/es-ES/Valencia-Startups/events/184088082/">“Working without boundaries” - <a href="https://www.meetup.com/es-ES/Valencia-Startups/">Valencia Startups</a> <time>May 28, 2014</time></li>
-          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/the-mobilewebatasnailspace">“The mobile web – At a snail‘s pace”</a> - <a href="http://valencia.frontenders.me/past/">Frontenders Valencia</a> <time>Sep 12, 2013</time></li>
-          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/a-future-friendly-web">“A Future Friendly Web”</a> - <a href="https://betabeers.com/event/betabeers-valencia-840/">Betabeers Valencia</a> <time>Apr 25, 2013</time></li>
+          <li><a href="https://uncovercity.com/" target="_blank">uncovercity</a> - build of a mobile app in React
+            Native to augment the real life product experience</li>
+          <li><a href="https://www.guruwalk.com/" target="_blank">GuruWalk</a> - improvement of the web &amp; mobile
+            interface to increase conversions</li>
+          <li><a href="http://www.adsnap.co.uk/" target="_blank">AdSnap</a> - build of a mobile prototype in React
+            Native to validate a product idea</li>
+          <li><a href="https://www.getprepd.com/" target="_blank">Prepd</a> - build of a production-ready mobile app
+            with React Native for iOS and Android</li>
+          <li><a href="https://www.ava.me/" target="_blank">Ava</a> - improvement of the web &amp; mobile UX in React
+            using the lean approach</li>
+          <li><a href="https://ncubehome.co.uk/" target="_blank">nCube</a> - migration of a mobile prototype from
+            jQuery Mobile to Mobile Angular UI</li>
+          <li><a href="http://mirror.co/" target="_blank">Mirror</a> - UX optimisations of the web &amp; mobile UI in
+            AngularJS using an API-driven approach</li>
+        </ul>
+      </div>
+
+      <div class="talks">
+        <h3>Conference talks</h3>
+        <ul>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/lo-mejor-y-peor-de-react-native-valenciajs">“Lo
+              mejor y peor de React Native”</a> - <a href="https://www.meetup.com/es-ES/ValenciaJS/events/238249872/">ValenciaJS</a>
+            <time>Mar 23, 2017</time> </li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/offline-first-the-painless-way">“Offline-first,
+              the painless way”</a> - <a href="https://www.topconf.com/conference//tallinn-2015/talk/offline-first-web-apps-the-painless-way/">TopConf
+              Tallinn</a></a> <time>Nov 18, 2015</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/secret/BJb3Iangb7Hxsc">“Pairing and iterating in
+              cross-functional UX Teams”</a> - <a href="https://www.meetup.com/de-DE/Latvian-Developers-Network/events/219651898/?eventId=219651898">Wildcard
+              Conference Riga</a> <time>May 16, 2015</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/offline-first-the-painless-way">“Offline-first,
+              the painless way”</a> - <a href="http://2015.jsday.it/talk/offline-first-web-apps-the-painless-way/">jsDay
+              Verona 2015</a> <time>May 14, 2015</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/secret/BJb3Iangb7Hxsc">“Pairing and iterating in
+              cross-functional UX Teams”</a> - <a href="https://www.facebook.com/uxmalaysia/">UX Malaysia</a> <time>Nov
+              29, 2014</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/codemotion-talk-41932602">“Leveraging
+              hood.ie to build for the offline state”</a> - <a href="http://2014.codemotion.es/es/agenda.html?recommended=#day1/leveraging-hoodie-to-build-for-the-offline-state">Codemotion
+              Madrid</a> <time>Nov 21, 2014</time></li>
+          <li><a target="_blank" href="https://www.meetup.com/es-ES/Valencia-Startups/events/184088082/">“Working
+              without boundaries” - <a href="https://www.meetup.com/es-ES/Valencia-Startups/">Valencia Startups</a>
+              <time>May 28, 2014</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/the-mobilewebatasnailspace">“The mobile
+              web – At a snail‘s pace”</a> - <a href="http://valencia.frontenders.me/past/">Frontenders Valencia</a>
+            <time>Sep 12, 2013</time></li>
+          <li><a target="_blank" href="https://de.slideshare.net/MarcelKalveram/a-future-friendly-web">“A Future
+              Friendly Web”</a> - <a href="https://betabeers.com/event/betabeers-valencia-840/">Betabeers Valencia</a>
+            <time>Apr 25, 2013</time></li>
         </ul>
       </div>
 
   </div>
 </div>
-
