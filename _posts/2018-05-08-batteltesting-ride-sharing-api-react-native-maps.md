@@ -35,9 +35,9 @@ What made the challenge interesting was that we were forced to test the ride-sha
 To make the experience as pleasant and predictable as possible for the user, we implemented a live map showing the current position of the vehicle when it's underway, for both the pickup and the return journey.
 
 <p class="images clearfix">
-  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-pickup.jpg"></amp-img>
-  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-search.jpg"></amp-img>
-  <amp-img class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-return.jpg"></amp-img>
+  <amp-img layout="responsive" class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-pickup.jpg"></amp-img>
+  <amp-img layout="responsive" class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-search.jpg"></amp-img>
+  <amp-img layout="responsive" class="img" width="230" height="454" src="/assets/images/screenshots/uncovercity-return.jpg"></amp-img>
 </p>
 
 In the screenshot above, you can see the different states of the app:
@@ -64,7 +64,7 @@ The API proxy sounds like a weird thing to do, but we actually had to put that l
 Unfortunately, at the time we built the app there was also no way to use the ride-sharing API's websocket integration which would push status updates to the app. So we had to go for good ol' polling and send requests to the server every few seconds kto obtain the current location data. Since we didn’t expect there to be tons of requests per hour, this seemed a viable solution for the beginning, even though not a very scalable one.
 
 <figure class="image">
-<amp-img class="img img--border" width="720" height="431" src="/assets/images/diagrams/redux-thunk-maps-api.jpg"></amp-img>
+<amp-img layout="responsive" class="img img--border" width="720" height="431" src="/assets/images/diagrams/redux-thunk-maps-api.jpg"></amp-img>
 <figcaption class="image__caption">High-level overview of the app interacting with the ride-sharing service's API via Redux</figcaption>
 </figure>
 
@@ -130,9 +130,9 @@ Updating coordinates is also really simple:
 A JavaScript interval fires a redux-thunk event to dispatch a new API request every second. The response then gets processed by a redux reducer and the data sent to the view. Once the MapView <a href="https://github.com/react-community/react-native-maps/blob/master/docs/marker.md">Marker</a> receives the new coordinates, it updates its position instantly.
 
 <figure class="image clearfix">
-  <amp-img class="img" width="351" height="627" src="/assets/images/gifs/cabify-underway-demo.gif"></amp-img>
-  <amp-img class="img" width="351" height="627" src="/assets/images/gifs/cabify-underway-padding-demo.gif"></amp-img>
-  <figcaption class="image__caption">The coordinates update every second, and the map centers the markers on every update. On the right, you can see that the bottom padding prevents the marker icons from ever overlapping with the driver details box.</figcaption>
+  <amp-img layout="intrinsic" class="img" width="351" height="627" src="/assets/images/gifs/cabify-underway-demo.gif"></amp-img>
+  <amp-img layout="intrinsic" class="img" width="351" height="627" src="/assets/images/gifs/cabify-underway-padding-demo.gif"></amp-img>
+  <!-- <figcaption class="image__caption">The coordinates update every second, and the map centers the markers on every update. On the right, you can see that the bottom padding prevents the marker icons from ever overlapping with the driver details box.</figcaption> -->
 </figure>
 
 ### Fitting the map to a set of supplied markers

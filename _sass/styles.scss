@@ -548,8 +548,14 @@ time {
 
   .image {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     .img {
-      max-width: 100%;
+      margin-bottom: 6px;
       &.img--border {
         border-radius: 12px;
       }
@@ -568,6 +574,7 @@ time {
 
   h2 {
     font-size: 1.5em;
+    line-height: 1.333em;
     color: #444;
     margin-top: 0.75em;
   }

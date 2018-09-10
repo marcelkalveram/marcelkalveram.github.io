@@ -34,9 +34,9 @@ Tasks in this project included:
 - showing several popups indicating the current status of the user's experience (e.g. taxi on its way, taxi arrived, taxi arrived at restaurant) and sending a push notification for each status change
 
 <p class="images clearfix">
-  <amp-img class="img" width="230" height="454" alt="Screenshot of the uncovercity iOS app experience screen" src="/assets/images/screenshots/uncovercity-experience.jpg"></amp-img>
-  <amp-img class="img" width="230" height="454" alt="Screenshot of the uncovercity iOS app pickup screen" src="/assets/images/screenshots/uncovercity-pickup.jpg"></amp-img>
-  <amp-img class="img" width="230" height="454" alt="Screenshot of the uncovercity iOS app popup screen" src="/assets/images/screenshots/uncovercity-popup.jpg"></amp-img>
+  <amp-img layout="responsive" class="img" width="230" height="454" alt="Screenshot of the uncovercity iOS app experience screen" src="/assets/images/screenshots/uncovercity-experience.jpg"></amp-img>
+  <amp-img layout="responsive" class="img" width="230" height="454" alt="Screenshot of the uncovercity iOS app pickup screen" src="/assets/images/screenshots/uncovercity-pickup.jpg"></amp-img>
+  <amp-img layout="responsive" class="img" width="230" height="454" alt="Screenshot of the uncovercity iOS app popup screen" src="/assets/images/screenshots/uncovercity-popup.jpg"></amp-img>
 </p>
 
 ## The solution
@@ -76,6 +76,6 @@ Even trivial things like using Expo's <a href="https://docs.expo.io/versions/lat
 
 To wrap up, testing the app on your phone is a piece of cake as well. <a href="https://itunes.apple.com/us/app/expo-client/id982107779?mt=8" target="_blank">Expo Client</a> allows you to immediately preview and test the app on your phone within minutes, allowing you to see changes in real-time. Pretty awesome, isn’t it?
 
-# Future posts about this project
+## Future posts about this project
 
 I’ve written <a href="/2018/05/08/using-maps-in-react-native-to-track-a-vehicle.html">another post</a> about my experience building the uncovercity app, where I cover how we did the API integration and what I learned from doing some real life user testing by living the experience as an uncovercity user myself.
