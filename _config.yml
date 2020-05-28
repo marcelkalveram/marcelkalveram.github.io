@@ -16,7 +16,7 @@
 title: Marcel Kalveram
 email: marcel.kalveram@googlemail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  JavaScript, React and React Native developer for lean businesses
+  Building and optimising mobile experiences for web & native
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://marcelkalveram.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: marcelkalveram
@@ -41,7 +41,6 @@ plugins:
 
 sass:
   style: compressed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
