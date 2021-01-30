@@ -333,7 +333,7 @@ a {
 // --- Container
 
 .container {
-  width: 50vw;
+  max-width: 666px;
   margin: 3rem auto;
   display: -ms-flexbox;
   -ms-flex-direction: column;
@@ -404,6 +404,10 @@ a {
 }
 
 // --- Posts home
+
+.home {
+  width: 100%;
+}
 
 .blog-posts {
   ul {
@@ -614,6 +618,7 @@ time {
 .container--footer ul {
   margin: 0 auto;
   padding: 2rem 0;
+  list-style: none;
 }
 
 .social-icon {
@@ -633,12 +638,16 @@ time {
   height: 100%;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
   .container--footer ul {
-    padding: 2rem 60px;
+    padding: 2rem 0;
+    width: 156px;
   }
   .social-icon {
     margin-bottom: 12px;
+  }
+  .social-icon:nth-child(3) {
+    margin-right: 0;
   }
 }
 
